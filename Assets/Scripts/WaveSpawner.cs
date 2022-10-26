@@ -40,7 +40,7 @@ public class WaveSpawner : MonoBehaviour
     {
         if(state == SpawnState.WAITNG)
         {
-            if (!EnemyIsAlive())
+            if (waveIndex < 9 && !EnemyIsAlive())
                 waveIndex++;
             else
                 return;
