@@ -42,6 +42,8 @@ public class WaveSpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
                 waveIndex++;
+            else
+                return;
         }
 
         if (waveCountdown <= 0)
