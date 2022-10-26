@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClickFunction : MonoBehaviour
+public class BuildingPlate : MonoBehaviour
 {
     public GameObject towerChoiceScene;
 

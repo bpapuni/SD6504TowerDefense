@@ -85,11 +85,11 @@ public class Towers : MonoBehaviour
 
         if (gameObject.CompareTag("FrostTower") || gameObject.CompareTag("BallistaTower") || gameObject.CompareTag("TinyTower"))
         {
-            Instantiate(Tower, ClickFunction.selectedPlate.transform.position, ClickFunction.selectedPlate.transform.rotation);
-            Vector3 rangePosition = new Vector3(ClickFunction.selectedPlate.transform.position.x, 0, ClickFunction.selectedPlate.transform.position.z);
-            Instantiate(towerRange, rangePosition, ClickFunction.selectedPlate.transform.rotation);
+            Instantiate(Tower, BuildingPlate.selectedPlate.transform.position, BuildingPlate.selectedPlate.transform.rotation);
+            Vector3 rangePosition = new Vector3(BuildingPlate.selectedPlate.transform.position.x, 0, BuildingPlate.selectedPlate.transform.position.z);
+            Instantiate(towerRange, rangePosition, BuildingPlate.selectedPlate.transform.rotation);
 
-            ClickFunction.selectedPlate = null;
+            BuildingPlate.selectedPlate = null;
         }
 
 

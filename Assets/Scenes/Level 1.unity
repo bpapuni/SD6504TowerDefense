@@ -9485,7 +9485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 0}
-  towerRange: {fileID: 0}
+  towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 970703816}
 --- !u!1001 &636728952
 PrefabInstance:
@@ -28867,7 +28867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tower: {fileID: 0}
-  towerRange: {fileID: 0}
+  towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 970703816}
 --- !u!1 &1927251553
 GameObject:
