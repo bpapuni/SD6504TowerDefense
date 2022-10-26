@@ -20,7 +20,7 @@ public class BuildingPlate : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void OnMouseUp()
     {
         if(gameObject.tag == "BuildingPlate")
         {

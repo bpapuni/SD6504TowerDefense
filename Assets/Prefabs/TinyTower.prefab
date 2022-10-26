@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400012}
   m_Layer: 0
-  m_Name: td_humans_Cannon_stage3
+  m_Name: TinyTower
   m_TagString: TinyTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
