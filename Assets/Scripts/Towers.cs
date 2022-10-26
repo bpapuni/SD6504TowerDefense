@@ -9,9 +9,9 @@ public class Towers : MonoBehaviour
 {
 
     public GameObject Tower;
+    public GameObject towerRange;
 
     private int frostTowerCount = 0;
-    private ClickFunction clickFunction;
 
     private Button frostTowerBtn;
     private Button ballistaTowerBtn;
@@ -85,14 +85,11 @@ public class Towers : MonoBehaviour
 
         if (gameObject.CompareTag("FrostTower") || gameObject.CompareTag("BallistaTower") || gameObject.CompareTag("TinyTower"))
         {
-            foreach (var obj in GameObject.FindGameObjectsWithTag("BuildingPlate"))
-            {
-                if (obj.GetComponent<ClickFunction>().selectedPlate)
-                    clickFunction = obj.GetComponent<ClickFunction>();
-            }
+            Instantiate(Tower, ClickFunction.selectedPlate.transform.position, ClickFunction.selectedPlate.transform.rotation);
+            Vector3 rangePosition = new Vector3(ClickFunction.selectedPlate.transform.position.x, 0, ClickFunction.selectedPlate.transform.position.z);
+            Instantiate(towerRange, rangePosition, ClickFunction.selectedPlate.transform.rotation);
 
-            Instantiate(Tower, clickFunction.selectedPlate.transform.position, clickFunction.selectedPlate.transform.rotation);
-            clickFunction.selectedPlate = null;
+            ClickFunction.selectedPlate = null;
         }
 
 

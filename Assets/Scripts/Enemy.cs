@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed;
 
     private int level;
     private Transform target;
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * speed/3 * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {

@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 2738583219272211786}
   - component: {fileID: 8754942390506812231}
   m_Layer: 0
-  m_Name: Frogman
+  m_Name: Manfrog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a57de47729c1f4ba432c3052338e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!1 &8754942389484392003
 GameObject:
   m_ObjectHideFlags: 0

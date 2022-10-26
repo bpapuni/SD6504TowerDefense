@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class ClickFunction : MonoBehaviour
 {
     public GameObject towerChoiceScene;
-    public Towers towers;
-    public Transform platePos;
 
-    public GameObject selectedPlate;
+    public static GameObject selectedPlate;
+    public static Transform platePos;
 
     private void Awake()
     {

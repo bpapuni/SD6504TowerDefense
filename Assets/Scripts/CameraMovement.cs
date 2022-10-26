@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     private float scrollSpeed = 1f;
     private int level;
     private int[,] levelBoundaries = new int[,] { { -7, -7, -147, -114 }, { -40, 0, -26, 43 } };
-    // Start is called before the first frame update
+
     void Start()
     {
         Application.targetFrameRate = 60;
