@@ -13,6 +13,7 @@ TagManager:
   - FrostTower
   - BallistaTower
   - TinyTower
+  - ConfirmTower
   layers:
   - Default
   - TransparentFX

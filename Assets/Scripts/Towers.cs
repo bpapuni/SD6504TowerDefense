@@ -18,6 +18,7 @@ public class Towers : MonoBehaviour
     private Button tinyTowerBtn;
 
     public GameObject towerChoiceScene;
+    public GameObject towerConfirmScene;
 
     private Transform selectedTowerLocation;
     private int damage;
@@ -71,9 +72,10 @@ public class Towers : MonoBehaviour
     void Start()
     {
         //clickFunction = GameObject.FindGameObjectWithTag("BuildingPlate").GetComponent<ClickFunction>();
-        
+        towerConfirmScene = GameObject.FindGameObjectWithTag("ConfirmTower").GetComponent<GameObject>();
+        towerConfirmScene.SetActive(false);
 
-    }
+}
 
     void Update()
     {
@@ -82,6 +84,7 @@ public class Towers : MonoBehaviour
     public void CreateTower(GameObject Tower)
     {
         towerChoiceScene.SetActive(false);
+        towerConfirmScene.SetActive(true);
 
         if (gameObject.CompareTag("FrostTower") || gameObject.CompareTag("BallistaTower") || gameObject.CompareTag("TinyTower"))
         {
