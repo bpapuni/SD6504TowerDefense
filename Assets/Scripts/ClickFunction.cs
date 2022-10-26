@@ -11,14 +11,9 @@ public class ClickFunction : MonoBehaviour
 
     public GameObject selectedPlate;
 
-
-    
-
-
     private void Awake()
     {
         towerChoiceScene.SetActive(false);
-        
     }
 
     private void Start()
@@ -30,16 +25,10 @@ public class ClickFunction : MonoBehaviour
     {
         if(gameObject.tag == "BuildingPlate")
         {
-
-            Debug.Log(2);
             selectedPlate = gameObject;
             platePos = gameObject.transform;
             towerChoiceScene.SetActive(true);
         }
-        
-
-
     }
-
 }
 
