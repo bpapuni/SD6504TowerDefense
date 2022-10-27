@@ -95,8 +95,6 @@ public class Towers : MonoBehaviour
             BuildingPlate.selectedPlate = null;
         }
 
-
-
     }
 
     public void DestoryTower()
