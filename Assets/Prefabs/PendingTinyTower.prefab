@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100012, guid: 2b772d7134d8dd348961423393146776, type: 3}
       propertyPath: m_Name
-      value: td_humans_Cannon_stage3
+      value: PendingTinyTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 2b772d7134d8dd348961423393146776, type: 3}
+      propertyPath: m_TagString
+      value: PendingTower
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 2b772d7134d8dd348961423393146776, type: 3}
       propertyPath: m_RootOrder

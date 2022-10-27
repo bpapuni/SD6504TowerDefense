@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Towers : MonoBehaviour
 {
-
-    public GameObject Tower;
+    public static GameObject confirmedTower;
+    public GameObject pendingTower;
     public GameObject towerRange;
 
     private int frostTowerCount = 0;
@@ -71,32 +71,37 @@ public class Towers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //clickFunction = GameObject.FindGameObjectWithTag("BuildingPlate").GetComponent<ClickFunction>();
-        towerConfirmScene = GameObject.FindGameObjectWithTag("ConfirmTower").GetComponent<GameObject>();
-        towerConfirmScene.SetActive(false);
-
-}
+        //towerConfirmScene.SetActive(false);
+    }
 
     void Update()
     {
     }
 
-    public void CreateTower(GameObject Tower)
+    public void CreatePendingTower(GameObject PendingTower)
     {
         towerChoiceScene.SetActive(false);
+        Instantiate(PendingTower, BuildingPlate.selectedPlate.transform.position, BuildingPlate.selectedPlate.transform.rotation);
+        Vector3 rangePosition = new Vector3(BuildingPlate.selectedPlate.transform.position.x, 0, BuildingPlate.selectedPlate.transform.position.z);
+        Instantiate(towerRange, rangePosition, BuildingPlate.selectedPlate.transform.rotation);
+        if (pendingTower)
+            confirmedTower = pendingTower;
         towerConfirmScene.SetActive(true);
+    }
 
-        if (gameObject.CompareTag("FrostTower") || gameObject.CompareTag("BallistaTower") || gameObject.CompareTag("TinyTower"))
+    public void CreateTower()
+    {
+        towerConfirmScene.SetActive(false);
+
+        foreach(GameObject o in GameObject.FindGameObjectsWithTag("PendingTower"))
         {
-            Instantiate(Tower, BuildingPlate.selectedPlate.transform.position, BuildingPlate.selectedPlate.transform.rotation);
-            Vector3 rangePosition = new Vector3(BuildingPlate.selectedPlate.transform.position.x, 0, BuildingPlate.selectedPlate.transform.position.z);
-            Instantiate(towerRange, rangePosition, BuildingPlate.selectedPlate.transform.rotation);
-
-            BuildingPlate.selectedPlate = null;
+            Destroy(o);
         }
+        
+        Instantiate(confirmedTower, BuildingPlate.selectedPlate.transform.position, BuildingPlate.selectedPlate.transform.rotation);
 
-
-
+        BuildingPlate.selectedPlate = null;
+        confirmedTower = null;
     }
 
     public void DestoryTower()
@@ -107,13 +112,5 @@ public class Towers : MonoBehaviour
     public void EditTower()
     {
 
-    }
-
-    public void OnMouseDown()
-    {
-        if (gameObject.tag == "BuildingPlate")
-        {
-
-        }
     }
 }

@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
       propertyPath: m_Name
-      value: td_humans_Magic_stage3
+      value: PendingFrostTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
+      propertyPath: m_TagString
+      value: PendingTower
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
       propertyPath: m_RootOrder

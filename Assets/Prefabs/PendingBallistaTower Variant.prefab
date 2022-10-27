@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100016, guid: b2e6c73e05d477d4d9e1c09ac709745e, type: 3}
       propertyPath: m_Name
-      value: PendingBallistaTower
+      value: PendingBallistaTower Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: b2e6c73e05d477d4d9e1c09ac709745e, type: 3}
+      propertyPath: m_TagString
+      value: PendingTower
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: b2e6c73e05d477d4d9e1c09ac709745e, type: 3}
       propertyPath: m_RootOrder
