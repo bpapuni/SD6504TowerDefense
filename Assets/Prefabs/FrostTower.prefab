@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 400016}
   - component: {fileID: 7279227511125254512}
   - component: {fileID: 7489055844399214740}
+  - component: {fileID: 8052069784166504020}
   m_Layer: 0
   m_Name: FrostTower
   m_TagString: FrostTower
@@ -815,9 +816,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1cadede85af7c458e7f2e8c3e6ccf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tower: {fileID: 100016}
+  pendingTower: {fileID: 0}
   towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 0}
+  towerConfirmScene: {fileID: 0}
 --- !u!58 &7489055844399214740
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -834,3 +836,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8052069784166504020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fe40db747249c4294e13b2da54baa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  turret: {fileID: 400012}
