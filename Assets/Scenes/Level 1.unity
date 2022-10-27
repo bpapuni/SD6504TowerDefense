@@ -4808,8 +4808,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 299931481}
-        m_TargetAssemblyTypeName: Towers, Assembly-CSharp
-        m_MethodName: CreateTower
+        m_TargetAssemblyTypeName: TowerSelect, Assembly-CSharp
+        m_MethodName: ConfirmPurchaseTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4866,12 +4866,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 299931476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1cadede85af7c458e7f2e8c3e6ccf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 955cd76f3f20b7741a9eb62d70c4866c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pendingTower: {fileID: 0}
-  towerRange: {fileID: 0}
-  towerChoiceScene: {fileID: 0}
+  towerChoiceScene: {fileID: 970703816}
   towerConfirmScene: {fileID: 1128464832}
 --- !u!1001 &301458988
 PrefabInstance:
@@ -9909,8 +9907,8 @@ GameObject:
   - component: {fileID: 621397483}
   - component: {fileID: 621397486}
   - component: {fileID: 621397485}
-  - component: {fileID: 621397487}
   - component: {fileID: 621397484}
+  - component: {fileID: 621397487}
   m_Layer: 0
   m_Name: BallistaTowerBtn
   m_TagString: BallistaTower
@@ -9931,7 +9929,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 963827211}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9983,12 +9981,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 621397487}
-        m_TargetAssemblyTypeName: Towers, Assembly-CSharp
-        m_MethodName: CreatePendingTower
-        m_Mode: 2
+        m_TargetAssemblyTypeName: TowerSelect, Assembly-CSharp
+        m_MethodName: PurchaseBallistaTower
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8910522902606729830, guid: 527f39beddad346479784507a136e2b6, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10041,11 +10039,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 621397482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1cadede85af7c458e7f2e8c3e6ccf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 955cd76f3f20b7741a9eb62d70c4866c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pendingTower: {fileID: 100016, guid: b2e6c73e05d477d4d9e1c09ac709745e, type: 3}
-  towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 970703816}
   towerConfirmScene: {fileID: 1128464832}
 --- !u!1001 &636728952
@@ -10231,6 +10227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
 --- !u!64 &640874682
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16041,8 +16038,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1135080746}
   - {fileID: 621397483}
+  - {fileID: 1135080746}
   - {fileID: 1923095567}
   - {fileID: 1942652286}
   m_Father: {fileID: 1401104199}
@@ -18253,6 +18250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
 --- !u!64 &1124082936
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18465,7 +18463,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 963827211}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18517,12 +18515,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1135080750}
-        m_TargetAssemblyTypeName: Towers, Assembly-CSharp
-        m_MethodName: CreatePendingTower
-        m_Mode: 2
+        m_TargetAssemblyTypeName: TowerSelect, Assembly-CSharp
+        m_MethodName: PurchaseFrostTower
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 5129371390942874275, guid: f65d97b2f23abd84693fd37580062f29, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18575,11 +18573,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135080745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1cadede85af7c458e7f2e8c3e6ccf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 955cd76f3f20b7741a9eb62d70c4866c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pendingTower: {fileID: 100016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
-  towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 970703816}
   towerConfirmScene: {fileID: 1128464832}
 --- !u!1 &1142406471
@@ -22559,6 +22555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
 --- !u!64 &1400946350
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23006,6 +23003,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c717fb89e24ff384785039c0f1169eee, type: 2}
+    - target: {fileID: 23471093985503362, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bf1194d44fe0d6458445f09a5da14b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0ad9e12aa69f14419bc9e45d54eb299, type: 3}
 --- !u!4 &1412312173 stripped
@@ -23026,6 +23039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 1}
 --- !u!64 &1412312180
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24535,7 +24549,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -29708,6 +29722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
 --- !u!64 &1856365824
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30621,8 +30636,8 @@ GameObject:
   - component: {fileID: 1923095567}
   - component: {fileID: 1923095570}
   - component: {fileID: 1923095569}
-  - component: {fileID: 1923095571}
   - component: {fileID: 1923095568}
+  - component: {fileID: 1923095571}
   m_Layer: 0
   m_Name: TinyTowerBtn
   m_TagString: TinyTower
@@ -30695,12 +30710,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1923095571}
-        m_TargetAssemblyTypeName: Towers, Assembly-CSharp
-        m_MethodName: CreatePendingTower
-        m_Mode: 2
+        m_TargetAssemblyTypeName: TowerSelect, Assembly-CSharp
+        m_MethodName: PurchaseTinyTower
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 5216396795740953348, guid: 5aeb39728bbd29945b8af8cb9fe1beb5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30753,11 +30768,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923095566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1cadede85af7c458e7f2e8c3e6ccf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 955cd76f3f20b7741a9eb62d70c4866c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pendingTower: {fileID: 100012, guid: 2b772d7134d8dd348961423393146776, type: 3}
-  towerRange: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
   towerChoiceScene: {fileID: 970703816}
   towerConfirmScene: {fileID: 1128464832}
 --- !u!1 &1927251553
@@ -30770,6 +30783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927251555}
   - component: {fileID: 1927251554}
+  - component: {fileID: 1927251556}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30860,6 +30874,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927251556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927251553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c55b044defe0d944bad3872f1a85a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PendingBallistaTower: {fileID: 8910522902606729830, guid: 527f39beddad346479784507a136e2b6, type: 3}
+  PendingFrostTower: {fileID: 5129371390942874275, guid: f65d97b2f23abd84693fd37580062f29, type: 3}
+  PendingTinyTower: {fileID: 5216396795740953348, guid: 5aeb39728bbd29945b8af8cb9fe1beb5, type: 3}
+  BallistaTower: {fileID: 100016, guid: b2e6c73e05d477d4d9e1c09ac709745e, type: 3}
+  FrostTower: {fileID: 100016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
+  TinyTower: {fileID: 100012, guid: 2b772d7134d8dd348961423393146776, type: 3}
+  selectedPlate: {fileID: 0}
 --- !u!1001 &1929688598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31293,6 +31326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerChoiceScene: {fileID: 970703816}
+  hoverColor: {r: 1, g: 0.8196079, b: 0.427451, a: 0}
 --- !u!64 &1946710120
 MeshCollider:
   m_ObjectHideFlags: 0

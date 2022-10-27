@@ -31,10 +31,13 @@ public class Turret : MonoBehaviour
         if (target == null)
             return;
 
-        Vector3 dir = target.position - transform.GetChild(0).position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
+        if (partToRotate)
+        {
+            Vector3 dir = target.position - transform.GetChild(0).position;
+            Quaternion lookRotation = Quaternion.LookRotation(dir);
+            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+            partToRotate.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
+        }
 
         if (fireCountdown <= 0f)
         {
