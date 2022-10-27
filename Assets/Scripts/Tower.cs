@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class Tower : MonoBehaviour
 {
 
     private Transform target;
@@ -16,13 +14,35 @@ public class Turret : MonoBehaviour
     [Header("Unity Fields")]
     public Transform partToRotate;
     public float turnSpeed = 10f;
-
     public GameObject Bullet;
     public Transform firePoint;
+    public Color hoverColor;
+
+    private Renderer[] rend;
+    private Color[] startColor;
 
     void Start()
     {
+        rend = gameObject.GetComponentsInChildren<Renderer>();
+        startColor = new Color[rend.Length];
+        for (int i = 0; i < rend.Length; i++)
+        {
+            if (rend[i].material.HasProperty("_Color"))
+                startColor[i] = rend[i].material.color;
+        }
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    void OnMouseEnter()
+    {
+        for (int i = 0; i < rend.Length; i++)
+            rend[i].material.color = hoverColor;
+    }
+
+    void OnMouseExit()
+    {
+        for (int i = 0; i < rend.Length; i++)
+            rend[i].material.color = startColor[i];
     }
 
     // Update is called once per frame
@@ -31,13 +51,10 @@ public class Turret : MonoBehaviour
         if (target == null)
             return;
 
-        if (partToRotate)
-        {
-            Vector3 dir = target.position - transform.GetChild(0).position;
-            Quaternion lookRotation = Quaternion.LookRotation(dir);
-            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-            partToRotate.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
-        }
+        Vector3 dir = target.position - transform.GetChild(0).position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
 
         if (fireCountdown <= 0f)
         {
@@ -51,6 +68,7 @@ public class Turret : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        // Wait required for ballista tower to aim, else arrow shoots out sideways
         yield return new WaitForSeconds(0.3f);
         GameObject bulletGO = (GameObject)Instantiate(Bullet, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
@@ -85,8 +103,8 @@ public class Turret : MonoBehaviour
             target = null;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, range);
+    //}
 }

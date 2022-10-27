@@ -5,27 +5,27 @@ using UnityEngine.UI;
 
 public class BuildingPlate : MonoBehaviour
 {
+    BuildManager buildManager;
     public GameObject towerChoiceScene;
     
     public Color hoverColor;
 
     private GameObject tower;
-    private Color startColor;
     private Renderer rend;
+    private Color startColor;
 
-    BuildManager buildManager;
 
     private void Start()
     {
-        rend = GetComponent<Renderer>();
         buildManager = BuildManager.instance;
+        rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
 
     void OnMouseEnter()
     {
-        //if (buildManager.GetTowerToBuild() == null)
-        //    return;
+        if (tower != null)
+            return;
         rend.material.color = hoverColor;
     }
 
@@ -36,14 +36,23 @@ public class BuildingPlate : MonoBehaviour
 
     void OnMouseUp()
     {
+        if (tower != null)
+            return;
+
         towerChoiceScene.SetActive(true);
         buildManager.selectedPlate = gameObject;
+
         //if(gameObject.tag == "BuildingPlate")
         //{
         //    selectedPlate = gameObject;
         //    platePos = gameObject.transform;
         //    towerChoiceScene.SetActive(true);
         //}
+    }
+
+    public void SetTower(GameObject _tower)
+    {
+        tower = _tower;
     }
 }
 

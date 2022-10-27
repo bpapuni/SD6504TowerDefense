@@ -459,6 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400012}
   - component: {fileID: 2633134357226597935}
+  - component: {fileID: 5613096637622570459}
   m_Layer: 0
   m_Name: TinyTower
   m_TagString: TinyTower
@@ -502,6 +503,20 @@ MonoBehaviour:
   turnSpeed: 10
   Bullet: {fileID: 602356865351561083, guid: 76556f58f02bfbd4b85b9de9faaeb690, type: 3}
   firePoint: {fileID: 3612039856841534166}
+  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
+--- !u!65 &5613096637622570459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.36, y: 3.33, z: 1.36}
+  m_Center: {x: 0, y: 1.65, z: 0}
 --- !u!1 &4053571613942012443
 GameObject:
   m_ObjectHideFlags: 0

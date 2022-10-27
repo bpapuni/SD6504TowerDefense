@@ -42,8 +42,9 @@ public class TowerSelect : MonoBehaviour
     public void ConfirmPurchaseTower()
     {
         Destroy(buildManager.GetPendingTower());
+        BuildingPlate selectedPlate = buildManager.selectedPlate.GetComponent<BuildingPlate>();
         GameObject towerToBuild = buildManager.GetTowerToBuild();
-        Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation);
+        selectedPlate.SetTower(Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation));
         towerConfirmScene.SetActive(false);
     }
 
