@@ -14,6 +14,8 @@ TagManager:
   - BallistaTower
   - TinyTower
   - ConfirmTower
+  - MainMenu
+  - HelpMenu
   layers:
   - Default
   - TransparentFX
