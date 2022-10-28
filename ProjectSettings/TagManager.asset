@@ -16,6 +16,9 @@ TagManager:
   - ConfirmTower
   - MainMenu
   - HelpMenu
+  - PendingTower
+  - StatusText
+  - TowerCostText
   layers:
   - Default
   - TransparentFX

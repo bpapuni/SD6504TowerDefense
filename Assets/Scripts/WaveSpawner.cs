@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static WaveSpawner instance;
     public enum SpawnState { SPAWNING, WAITNG, COUNTING};
 
     [System.Serializable]
@@ -28,6 +29,17 @@ public class WaveSpawner : MonoBehaviour
     public SpawnState state = SpawnState.COUNTING;
 
     private int level;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("More than 1");
+            return;
+        }
+
+        instance = this;
+    }
 
     void Start() 
     {

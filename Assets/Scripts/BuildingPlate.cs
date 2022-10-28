@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BuildingPlate : MonoBehaviour
 {
     BuildManager buildManager;
+    Status status;
     public GameObject towerChoiceScene;
     
     public Color hoverColor;
@@ -18,6 +17,7 @@ public class BuildingPlate : MonoBehaviour
     private void Start()
     {
         buildManager = BuildManager.instance;
+        status = Status.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
@@ -40,14 +40,10 @@ public class BuildingPlate : MonoBehaviour
             return;
 
         towerChoiceScene.SetActive(true);
+        GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = status.FrostCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[2].GetComponent<TMP_Text>().text = status.TinyCost.ToString();
         buildManager.selectedPlate = gameObject;
-
-        //if(gameObject.tag == "BuildingPlate")
-        //{
-        //    selectedPlate = gameObject;
-        //    platePos = gameObject.transform;
-        //    towerChoiceScene.SetActive(true);
-        //}
     }
 
     public void SetTower(GameObject _tower)
