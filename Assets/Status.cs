@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,7 +33,7 @@ public class Status : MonoBehaviour
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectsWithTag("StatusText")[0].GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectsWithTag("StatusText")[1].GetComponent<Text>();
-        UpdateGold();
+        UpdateGold(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
     }
 
@@ -49,8 +48,9 @@ public class Status : MonoBehaviour
         }
     }
 
-    public void UpdateGold()
+    public void UpdateGold(int goldChange)
     {
+        gold += goldChange;
         GoldAmount.text = gold.ToString();
     }
 

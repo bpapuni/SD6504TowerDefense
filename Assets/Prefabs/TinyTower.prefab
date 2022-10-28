@@ -503,7 +503,7 @@ MonoBehaviour:
   turnSpeed: 10
   Bullet: {fileID: 602356865351561083, guid: 76556f58f02bfbd4b85b9de9faaeb690, type: 3}
   firePoint: {fileID: 3612039856841534166}
-  hoverColor: {r: 1, g: 0.81960785, b: 0.42745098, a: 0}
+  hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 0}
 --- !u!65 &5613096637622570459
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -20,29 +20,35 @@ public class BuildingPlate : MonoBehaviour
         status = Status.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+
+        towerChoiceScene.SetActive(true);
+        GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[2].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
+        towerChoiceScene.SetActive(false);
     }
 
     void OnMouseEnter()
     {
-        if (tower != null)
+        if (tower != null || buildManager.selectedPlate != null)
             return;
         rend.material.color = hoverColor;
     }
 
     void OnMouseExit()
     {
+        if (buildManager.selectedPlate != null)
+            return;
+
         rend.material.color = startColor;
     }
 
     void OnMouseUp()
     {
-        if (tower != null)
+        if (tower != null || buildManager.selectedPlate != null)
             return;
 
         towerChoiceScene.SetActive(true);
-        GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
-        GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = status.FrostCost.ToString();
-        GameObject.FindGameObjectsWithTag("TowerCostText")[2].GetComponent<TMP_Text>().text = status.TinyCost.ToString();
         buildManager.selectedPlate = gameObject;
     }
 

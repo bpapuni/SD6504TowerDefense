@@ -22,10 +22,12 @@ public class Tower : MonoBehaviour
 
     private Renderer[] rend;
     private Color[] startColor;
+    private Renderer buildPlate;
 
-    void Start()
+    void Awake()
     {
         buildManager = BuildManager.instance;
+        buildPlate = buildManager.selectedPlate.GetComponent<Renderer>();
         status = Status.instance;
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
@@ -39,18 +41,29 @@ public class Tower : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (buildManager.selectedPlate != null)
+            return;
+
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = hoverColor;
+        buildPlate.material.color = hoverColor;
     }
 
     void OnMouseExit()
     {
+        if (buildManager.selectedPlate != null)
+            return;
+
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = startColor[i];
+        buildPlate.material.color = Color.white;
     }
 
     void OnMouseUp()
     {
+        if (buildManager.selectedPlate != null)
+            return;
+
         int TowerCost = 0;
         buildManager.selectedTower = gameObject;
 

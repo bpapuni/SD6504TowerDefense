@@ -33209,9 +33209,10 @@ MonoBehaviour:
   FrostTower: {fileID: 100016, guid: b264727080ac17c4aa4bd396d05ae2d9, type: 3}
   TinyTower: {fileID: 100012, guid: 2b772d7134d8dd348961423393146776, type: 3}
   selectedPlate: {fileID: 0}
+  selectedTower: {fileID: 0}
   towerChoice: {fileID: 970703816}
   confirmTowerChoice: {fileID: 1128464832}
-  confrimTowerDelete: {fileID: 1616349980}
+  confirmTowerDelete: {fileID: 1616349980}
 --- !u!114 &1927251557
 MonoBehaviour:
   m_ObjectHideFlags: 0
