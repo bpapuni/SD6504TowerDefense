@@ -1,9 +1,11 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
     BuildManager buildManager;
+    Status status;
     private Transform target;
 
     [Header("Attributes")]
@@ -24,6 +26,7 @@ public class Tower : MonoBehaviour
     void Start()
     {
         buildManager = BuildManager.instance;
+        status = Status.instance;
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
         for (int i = 0; i < rend.Length; i++)
@@ -48,7 +51,17 @@ public class Tower : MonoBehaviour
 
     void OnMouseUp()
     {
+        int TowerCost = 0;
         buildManager.selectedTower = gameObject;
+
+        if (gameObject.tag == "BallistaTower")
+            TowerCost = status.BallistaCost;
+        else if (gameObject.tag == "FrostTower")
+            TowerCost = status.FrostCost;
+        else if (gameObject.tag == "TinyTower")
+            TowerCost = status.TinyCost;
+
+        buildManager.confirmTowerDelete.GetComponentInChildren<TMP_Text>().text = "Do you wish to sell this tower for " + TowerCost / 2 + " gold?";
         buildManager.confirmTowerDelete.SetActive(true);
     }
 
