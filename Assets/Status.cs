@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class Status : MonoBehaviour
     public int TinyCost;
 
     private Text GoldAmount;
-    private Text SpawnTime;
+    private Text StatusMessage;
 
     void Awake()
     {
@@ -32,20 +33,37 @@ public class Status : MonoBehaviour
     {
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectsWithTag("StatusText")[0].GetComponent<Text>();
-        SpawnTime = GameObject.FindGameObjectsWithTag("StatusText")[1].GetComponent<Text>();
+        StatusMessage = GameObject.FindGameObjectsWithTag("StatusText")[1].GetComponent<Text>();
         UpdateGold();
+        InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
     }
 
-    private void Update()
+    void WaveSpawnTime()
     {
         if (waveSpawner.waveCountdown > 0)
-            SpawnTime.text = "Time Until First Wave: " + Mathf.Round(waveSpawner.waveCountdown).ToString();
+            StatusMessage.text = "Time Until First Wave: " + Mathf.Round(waveSpawner.waveCountdown).ToString();
         else
-            Destroy(SpawnTime);
+        {
+            StatusMessage.text = "";
+            CancelInvoke("WaveSpawnTime");
+        }
     }
 
     public void UpdateGold()
     {
         GoldAmount.text = gold.ToString();
+    }
+
+    public void ShowMessage(string message, int displayTime)
+    {
+        StartCoroutine(Display(message, displayTime));
+    }
+
+    IEnumerator Display(string message, int displayTime)
+    {
+        StatusMessage.text = message;
+        Debug.Log(StatusMessage.text);
+        yield return new WaitForSeconds(displayTime);
+        StatusMessage.text = "";
     }
 }

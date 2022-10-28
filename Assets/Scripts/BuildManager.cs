@@ -13,6 +13,11 @@ public class BuildManager : MonoBehaviour
     public GameObject FrostTower;
     public GameObject TinyTower;
     public GameObject selectedPlate;
+    public GameObject selectedTower;
+    public GameObject towerChoice;
+    public GameObject confirmTowerChoice;
+    public GameObject confirmTowerDelete;
+
     private GameObject pendingTower;
     private GameObject towerToBuild;
 

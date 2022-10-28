@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-
+    BuildManager buildManager;
     private Transform target;
 
     [Header("Attributes")]
@@ -23,6 +23,7 @@ public class Tower : MonoBehaviour
 
     void Start()
     {
+        buildManager = BuildManager.instance;
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
         for (int i = 0; i < rend.Length; i++)
@@ -43,6 +44,12 @@ public class Tower : MonoBehaviour
     {
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = startColor[i];
+    }
+
+    void OnMouseUp()
+    {
+        buildManager.selectedTower = gameObject;
+        buildManager.confirmTowerDelete.SetActive(true);
     }
 
     // Update is called once per frame

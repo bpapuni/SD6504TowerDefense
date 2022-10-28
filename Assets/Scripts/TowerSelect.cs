@@ -6,8 +6,6 @@ public class TowerSelect : MonoBehaviour
 {
     BuildManager buildManager;
     Status status;
-    public GameObject towerChoiceScene;
-    public GameObject towerConfirmScene;
     private Image border;
 
     void Start()
@@ -23,8 +21,8 @@ public class TowerSelect : MonoBehaviour
         buildManager.SetPendingTower(Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation));
         buildManager.SetTowerToBuild(buildManager.BallistaTower);
         HideHighlight();
-        towerChoiceScene.SetActive(false);
-        towerConfirmScene.SetActive(true);
+        buildManager.towerChoice.SetActive(false);
+        buildManager.confirmTowerChoice.SetActive(true);
     }
 
     public void PurchaseFrostTower()
@@ -33,8 +31,8 @@ public class TowerSelect : MonoBehaviour
         buildManager.SetPendingTower(Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation));
         buildManager.SetTowerToBuild(buildManager.FrostTower);
         HideHighlight();
-        towerChoiceScene.SetActive(false);
-        towerConfirmScene.SetActive(true);
+        buildManager.towerChoice.SetActive(false);
+        buildManager.confirmTowerChoice.SetActive(true);
     }
 
     public void PurchaseTinyTower()
@@ -43,8 +41,8 @@ public class TowerSelect : MonoBehaviour
         buildManager.SetPendingTower(Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation));
         buildManager.SetTowerToBuild(buildManager.TinyTower);
         HideHighlight();
-        towerChoiceScene.SetActive(false);
-        towerConfirmScene.SetActive(true);
+        buildManager.towerChoice.SetActive(false);
+        buildManager.confirmTowerChoice.SetActive(true);
     }
 
     public void ConfirmPurchaseTower()
@@ -62,7 +60,8 @@ public class TowerSelect : MonoBehaviour
         if (status.gold < TowerCost)
         {
             CancelSelect();
-            towerConfirmScene.SetActive(false);
+            status.ShowMessage("Not enough gold!", 3);
+            buildManager.confirmTowerChoice.SetActive(false);
             return;
         }
 
@@ -72,14 +71,33 @@ public class TowerSelect : MonoBehaviour
         BuildingPlate selectedPlate = buildManager.selectedPlate.GetComponent<BuildingPlate>();
         
         selectedPlate.SetTower(Instantiate(towerToBuild, buildManager.selectedPlate.transform.position, buildManager.selectedPlate.transform.rotation));
-        towerConfirmScene.SetActive(false);
+        buildManager.confirmTowerChoice.SetActive(false);
+    }
+
+    public void ConfirmDeleteTower()
+    {
+        int TowerCost = 0;
+        GameObject towerToDelete = buildManager.selectedTower;
+
+        if (towerToDelete.tag == "BallistaTower")
+            TowerCost = status.BallistaCost;
+        else if (towerToDelete.tag == "FrostTower")
+            TowerCost = status.FrostCost;
+        else if (towerToDelete.tag == "TinyTower")
+            TowerCost = status.TinyCost;
+
+        Destroy(towerToDelete);
+        status.gold += TowerCost / 2;
+        status.UpdateGold();
+        buildManager.confirmTowerDelete.SetActive(false);
     }
 
     public void CancelSelect()
     {
         Destroy(buildManager.GetPendingTower());
         border.color = new Color(255, 255, 255, 1);
-        towerConfirmScene.SetActive(false);
+        buildManager.confirmTowerChoice.SetActive(false);
+        buildManager.confirmTowerDelete.SetActive(false);
     }
 
     public void ShowHighlight()
