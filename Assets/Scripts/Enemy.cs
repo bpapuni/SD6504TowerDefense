@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
+    WaveSpawner waveSpawner;
     public float speed;
 
     private int level;
     private Transform target;
-    private int wavepointIndex = 0;
+    private int waypointIndex = 0;
+    private int health;
 
     void Start()
     {
@@ -17,11 +19,13 @@ public class Enemy : MonoBehaviour
         if (level == 1)
         {
             if (Vector3.Distance(transform.position, Waypoints.waypoints[0].position) > 30f)
-                wavepointIndex = 10;
+                waypointIndex = 10;
         }
 
-        target = Waypoints.waypoints[wavepointIndex];
+        target = Waypoints.waypoints[waypointIndex];
 
+        waveSpawner = WaveSpawner.instance;
+        health = waveSpawner.waves[waveSpawner.waveIndex].health;
     }
 
 
@@ -42,18 +46,18 @@ public class Enemy : MonoBehaviour
     {
         if (level == 1)
         {
-            if (wavepointIndex == Waypoints.waypoints.Length - 2)
+            if (waypointIndex == Waypoints.waypoints.Length - 2)
             {
                 Destroy(gameObject);
                 return;
             }
 
-            wavepointIndex = wavepointIndex == 10 ? 4 : wavepointIndex + 1;
-            target = Waypoints.waypoints[wavepointIndex];
+            waypointIndex = waypointIndex == 10 ? 4 : waypointIndex + 1;
+            target = Waypoints.waypoints[waypointIndex];
         }
         else
         {
-            if (wavepointIndex == 30)
+            if (waypointIndex == 30)
             {
                 Destroy(gameObject);
                 return;
@@ -61,16 +65,16 @@ public class Enemy : MonoBehaviour
 
             int rand = Random.Range(0, 2);
             if (rand == 1) { 
-                if (wavepointIndex == 0)
-                    wavepointIndex = 31;
+                if (waypointIndex == 0)
+                    waypointIndex = 31;
             }
             
-            if (wavepointIndex == 54)
-                wavepointIndex = 26;
+            if (waypointIndex == 54)
+                waypointIndex = 26;
             else
-                wavepointIndex++;
+                waypointIndex++;
 
-            target = Waypoints.waypoints[wavepointIndex];
+            target = Waypoints.waypoints[waypointIndex];
         }
 
     }

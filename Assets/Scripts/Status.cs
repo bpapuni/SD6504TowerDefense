@@ -49,9 +49,19 @@ public class Status : MonoBehaviour
         GoldAmount.text = gold.ToString();
     }
 
+    public void ShowMessage(string message)
+    {
+        StatusMessage.text = message;
+    }
+
     public void ShowMessage(string message, int displayTime)
     {
         StartCoroutine(Display(message, displayTime));
+    }
+
+    public void ClearMessage()
+    {
+        StatusMessage.text = "";
     }
 
     IEnumerator Display(string message, int displayTime)
