@@ -4837,7 +4837,7 @@ GameObject:
   - component: {fileID: 3280519133390621004}
   - component: {fileID: 3280519133390621041}
   m_Layer: 0
-  m_Name: MagicBuff
+  m_Name: MagicAura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
