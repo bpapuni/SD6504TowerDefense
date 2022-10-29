@@ -22,9 +22,9 @@ public class BuildingPlate : MonoBehaviour
         startColor = rend.material.color;
 
         towerChoiceScene.SetActive(true);
-        GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
-        GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
-        GameObject.FindGameObjectsWithTag("TowerCostText")[2].GetComponent<TMP_Text>().text = status.BallistaCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = buildManager.BallistaCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = buildManager.FrostCost.ToString();
+        GameObject.FindGameObjectsWithTag("TowerCostText")[2].GetComponent<TMP_Text>().text = buildManager.TinyCost.ToString();
         towerChoiceScene.SetActive(false);
     }
 
@@ -55,6 +55,11 @@ public class BuildingPlate : MonoBehaviour
     public void SetTower(GameObject _tower)
     {
         tower = _tower;
+    }
+
+    public GameObject GetTower()
+    {
+        return tower;
     }
 }
 

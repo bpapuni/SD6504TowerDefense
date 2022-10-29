@@ -9,11 +9,6 @@ public class Status : MonoBehaviour
     [Header("Starting Gold")]
     public int gold;
 
-    [Header("Unity Fields")]
-    public int BallistaCost;
-    public int FrostCost;
-    public int TinyCost;
-
     private Text GoldAmount;
     private Text StatusMessage;
 
@@ -62,7 +57,6 @@ public class Status : MonoBehaviour
     IEnumerator Display(string message, int displayTime)
     {
         StatusMessage.text = message;
-        Debug.Log(StatusMessage.text);
         yield return new WaitForSeconds(displayTime);
         StatusMessage.text = "";
     }

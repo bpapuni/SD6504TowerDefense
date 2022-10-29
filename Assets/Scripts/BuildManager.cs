@@ -12,6 +12,9 @@ public class BuildManager : MonoBehaviour
     public GameObject BallistaTower;
     public GameObject FrostTower;
     public GameObject TinyTower;
+    public int BallistaCost;
+    public int FrostCost;
+    public int TinyCost;
     public GameObject selectedPlate;
     public GameObject selectedTower;
     public GameObject rangeIndicatorObj;
@@ -22,7 +25,7 @@ public class BuildManager : MonoBehaviour
     private GameObject pendingTower;
     private GameObject towerToBuild;
     private GameObject rangeIndicator;
-
+    private Renderer[] rend;
 
     void Awake()
     {
@@ -76,5 +79,22 @@ public class BuildManager : MonoBehaviour
     {
         selectedPlate.GetComponent<BuildingPlate>().SetTower(Instantiate(towerToBuild, selectedPlate.transform.position, selectedPlate.transform.rotation));
         HidePendingTower();
+    }
+
+    public void DeleteTower()
+    {
+        Destroy(selectedTower);
+        selectedPlate.GetComponent<Renderer>().material.color = Color.white;
+        selectedPlate = null;
+    }
+
+    public void CancelDelete()
+    {
+        rend = selectedTower.GetComponentsInChildren<Renderer>();
+        for (int i = 0; i < rend.Length; i++)
+            rend[i].material.color = Color.white;
+        selectedPlate.GetComponent<Renderer>().material.color = Color.white;
+        selectedTower = null;
+        selectedPlate = null;
     }
 }

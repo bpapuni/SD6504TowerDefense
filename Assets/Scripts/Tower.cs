@@ -22,12 +22,16 @@ public class Tower : MonoBehaviour
 
     private Renderer[] rend;
     private Color[] startColor;
-    private Renderer buildPlate;
+    private GameObject buildPlate;
+    private Renderer bpRend;
+    private TMP_Text confirmDelete;
+    private bool deleting;
 
     void Awake()
     {
         buildManager = BuildManager.instance;
-        buildPlate = buildManager.selectedPlate.GetComponent<Renderer>();
+        buildPlate = buildManager.selectedPlate;
+        bpRend = buildPlate.GetComponent<Renderer>();
         status = Status.instance;
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
@@ -36,27 +40,29 @@ public class Tower : MonoBehaviour
             if (rend[i].material.HasProperty("_Color"))
                 startColor[i] = rend[i].material.color;
         }
+        confirmDelete = buildManager.confirmTowerDelete.GetComponentInChildren<TMP_Text>();
+        deleting = false;
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
     void OnMouseEnter()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || deleting)
             return;
 
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = hoverColor;
-        buildPlate.material.color = hoverColor;
+        bpRend.material.color = hoverColor;
     }
 
     void OnMouseExit()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || deleting)
             return;
 
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = startColor[i];
-        buildPlate.material.color = Color.white;
+        bpRend.material.color = Color.white;
     }
 
     void OnMouseUp()
@@ -64,17 +70,18 @@ public class Tower : MonoBehaviour
         if (buildManager.selectedPlate != null)
             return;
 
+        buildManager.selectedPlate = buildPlate;
         int TowerCost = 0;
         buildManager.selectedTower = gameObject;
 
         if (gameObject.tag == "BallistaTower")
-            TowerCost = status.BallistaCost;
+            TowerCost = buildManager.BallistaCost;
         else if (gameObject.tag == "FrostTower")
-            TowerCost = status.FrostCost;
+            TowerCost = buildManager.FrostCost;
         else if (gameObject.tag == "TinyTower")
-            TowerCost = status.TinyCost;
+            TowerCost = buildManager.TinyCost;
 
-        buildManager.confirmTowerDelete.GetComponentInChildren<TMP_Text>().text = "Do you wish to sell this tower for " + TowerCost / 2 + " gold?";
+        confirmDelete.text = "Do you wish to sell this tower for " + TowerCost / 2 + " gold?";
         buildManager.confirmTowerDelete.SetActive(true);
     }
 

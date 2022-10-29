@@ -13,7 +13,7 @@ public class TowerSelect : MonoBehaviour
     {
         buildManager = BuildManager.instance;
         status = Status.instance;
-        border = transform.parent.GetComponent<Image>();
+        border = transform.parent.GetComponentInChildren<Image>();
     }
 
     public void PurchaseBallistaTower()
@@ -47,11 +47,11 @@ public class TowerSelect : MonoBehaviour
         GameObject towerToBuild = buildManager.GetTowerToBuild();
 
         if (towerToBuild.tag == "BallistaTower")
-            TowerCost = status.BallistaCost;
+            TowerCost = buildManager.BallistaCost;
         else if (towerToBuild.tag == "FrostTower")
-            TowerCost = status.FrostCost;
+            TowerCost = buildManager.FrostCost;
         else if (towerToBuild.tag == "TinyTower")
-            TowerCost = status.TinyCost;
+            TowerCost = buildManager.TinyCost;
 
         if (status.gold < TowerCost)
         {
@@ -72,21 +72,31 @@ public class TowerSelect : MonoBehaviour
         GameObject towerToDelete = buildManager.selectedTower;
 
         if (towerToDelete.tag == "BallistaTower")
-            TowerCost = status.BallistaCost;
+            TowerCost = buildManager.BallistaCost;
         else if (towerToDelete.tag == "FrostTower")
-            TowerCost = status.FrostCost;
+            TowerCost = buildManager.FrostCost;
         else if (towerToDelete.tag == "TinyTower")
-            TowerCost = status.TinyCost;
+            TowerCost = buildManager.TinyCost;
 
-        Destroy(towerToDelete);
         status.UpdateGold(TowerCost / 2);
+        buildManager.DeleteTower();
         buildManager.confirmTowerDelete.SetActive(false);
     }
 
     public void CancelSelect()
     {
-        buildManager.HidePendingTower();
-        border.color = new Color(255, 255, 255, 1);
+        // Fires if confirmTowerDelete scene is active
+        if (buildManager.selectedTower != null)
+            buildManager.CancelDelete();
+        // Fires if towerChoice or confirmTowerChoice scene is active
+        else /*if (buildManager.GetPendingTower())*/
+            buildManager.HidePendingTower();
+
+        // Changes towerChoice selection border from green to normal
+        if (transform.parent.name == "TowerChoice")
+            border.color = new Color(255, 255, 255, 1);
+
+        buildManager.towerChoice.SetActive(false);
         buildManager.confirmTowerChoice.SetActive(false);
         buildManager.confirmTowerDelete.SetActive(false);
     }
