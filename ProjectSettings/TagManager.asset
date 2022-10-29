@@ -16,6 +16,14 @@ TagManager:
   - ConfirmTower
   - MainMenu
   - HelpMenu
+<<<<<<< Updated upstream
+=======
+  - PendingTower
+  - StatusText
+  - TowerCostText
+  - FxTemporaire
+  - Weapon
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Enemy : MonoBehaviour
 {
     public float speed;
+    public int enemyHealth;
+    
 
     private int level;
     private Transform target;
     private int wavepointIndex = 0;
+    
 
     void Start()
     {
@@ -22,6 +26,9 @@ public class Enemy : MonoBehaviour
 
         target = Waypoints.waypoints[wavepointIndex];
 
+        WaveSpawner waveSpawner = WaveSpawner.instance;
+        enemyHealth = waveSpawner.waves[waveSpawner.waveIndex].health;
+
     }
 
 
@@ -30,7 +37,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
-        transform.Translate(dir.normalized * speed/2 * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * speed / 2 * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
@@ -60,11 +67,12 @@ public class Enemy : MonoBehaviour
             }
 
             int rand = Random.Range(0, 2);
-            if (rand == 1) { 
+            if (rand == 1)
+            {
                 if (wavepointIndex == 0)
                     wavepointIndex = 31;
             }
-            
+
             if (wavepointIndex == 54)
                 wavepointIndex = 26;
             else
@@ -74,4 +82,17 @@ public class Enemy : MonoBehaviour
         }
 
     }
+
+    public void TakeDamage(int damage)
+    {
+
+        
+        
+        enemyHealth -= damage;
+        if(enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
