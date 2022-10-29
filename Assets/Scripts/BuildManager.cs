@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -18,6 +17,7 @@ public class BuildManager : MonoBehaviour
     public GameObject selectedPlate;
     public GameObject selectedTower;
     public GameObject rangeIndicatorObj;
+    public GameObject magicBuff;
     public GameObject towerChoice;
     public GameObject confirmTowerChoice;
     public GameObject confirmTowerDelete;
@@ -36,6 +36,36 @@ public class BuildManager : MonoBehaviour
         }
 
         instance = this;
+
+        GameObject[] buildPlates = GameObject.FindGameObjectsWithTag("BuildingPlate");
+        int[] magicNums = new int[3];
+        for (int i = 0; i < 3; i++)
+        {
+            int rand;
+            do
+            {
+                rand = Random.Range(0, buildPlates.Length);
+            } while (magicNums.Contains(rand));
+            magicNums[i] = rand;
+        }
+
+        for (int i = 0; i < buildPlates.Length; i++)
+        {
+            if (i == magicNums[0])
+            {
+                buildPlates[i].GetComponent<BuildingPlate>().type = BuildingPlate.plateType.FIRE;
+            }
+            else if (i == magicNums[1])
+            {
+                buildPlates[i].GetComponent<BuildingPlate>().type = BuildingPlate.plateType.RANGE;
+            }
+            else if (i == magicNums[2])
+            {
+                buildPlates[i].GetComponent<BuildingPlate>().type = BuildingPlate.plateType.SPEED;
+            }
+            else
+                buildPlates[i].GetComponent<BuildingPlate>().type = BuildingPlate.plateType.NORMAL;
+        }
     }
 
     public GameObject GetPendingTower()

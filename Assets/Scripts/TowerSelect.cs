@@ -89,7 +89,7 @@ public class TowerSelect : MonoBehaviour
         if (buildManager.selectedTower != null)
             buildManager.CancelDelete();
         // Fires if towerChoice or confirmTowerChoice scene is active
-        else /*if (buildManager.GetPendingTower())*/
+        else
             buildManager.HidePendingTower();
 
         // Changes towerChoice selection border from green to normal

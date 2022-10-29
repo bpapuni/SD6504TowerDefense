@@ -11054,6 +11054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &640874682
@@ -18897,6 +18898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1124082936
@@ -23718,6 +23720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1400946350
@@ -24201,6 +24204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1412312180
@@ -31646,6 +31650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1856365824
@@ -33214,6 +33219,7 @@ MonoBehaviour:
   selectedPlate: {fileID: 0}
   selectedTower: {fileID: 0}
   rangeIndicatorObj: {fileID: 1829757741530836379, guid: 1e574701e90948944bfb6f426e89072e, type: 3}
+  magicBuff: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
   towerChoice: {fileID: 970703816}
   confirmTowerChoice: {fileID: 1128464832}
   confirmTowerDelete: {fileID: 1616349980}
@@ -33675,6 +33681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78e2a861783ed544b1bc4cb3130a2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1946710120
