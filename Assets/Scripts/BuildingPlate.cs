@@ -9,9 +9,9 @@ public class BuildingPlate : MonoBehaviour
 
     public enum plateType { NORMAL, FIRE, RANGE, SPEED };
     public plateType type;
-    public GameObject towerChoiceScene;    
     public Color hoverColor;
 
+    private GameObject towerChoiceScene;    
     private GameObject tower;
     private Renderer rend;
     private Color startColor;
@@ -24,7 +24,7 @@ public class BuildingPlate : MonoBehaviour
         status = Status.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
-
+        towerChoiceScene = buildManager.towerChoice;
         towerChoiceScene.SetActive(true);
         GameObject.FindGameObjectsWithTag("TowerCostText")[0].GetComponent<TMP_Text>().text = buildManager.BallistaCost.ToString();
         GameObject.FindGameObjectsWithTag("TowerCostText")[1].GetComponent<TMP_Text>().text = buildManager.FrostCost.ToString();
