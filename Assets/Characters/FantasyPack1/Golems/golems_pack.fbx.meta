@@ -1,147 +1,383 @@
 fileFormatVersion: 2
 guid: 285c605c07ba58a46ab1d3941f98e55e
-timeCreated: 1463818741
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: Arm1.L
-    100002: Arm1.R
-    100004: Arm2.L
-    100006: Arm2.R
-    100008: Elbow_ctrl.L
-    100010: Elbow_ctrl.L_end
-    100012: Elbow_ctrl.R
-    100014: Elbow_ctrl.R_end
-    100016: Ent_Base
-    100018: Finger1_hi.L
-    100020: Finger1_hi.L_end
-    100022: Finger1_hi.R
-    100024: Finger1_hi.R_end
-    100026: Finger2_hi.L
-    100028: Finger2_hi.L_end
-    100030: Finger2_hi.R
-    100032: Finger2_hi.R_end
-    100034: Foot.L
-    100036: Foot.L_end
-    100038: Foot.R
-    100040: Foot.R_end
-    100042: Foot_IK.L
-    100044: Foot_IK.R
-    100046: Golem
-    100048: Golem_Armature
-    100050: Golem_ice_parts
-    100052: Golem_St_finers
-    100054: //RootNode
-    100056: Hand_IK.L
-    100058: Hand_IK.R
-    100060: Head
-    100062: Head_end
-    100064: Knee_ctrl.L
-    100066: Knee_ctrl.L_end
-    100068: Knee_ctrl.R
-    100070: Knee_ctrl.R_end
-    100072: Leg_end.L
-    100074: Leg_end.R
-    100076: Leg_hi.L
-    100078: Leg_hi.R
-    100080: Spine
-    100082: Thumb_hi.L
-    100084: Thumb_hi.L_end
-    100086: Thumb_hi.R
-    100088: Thumb_hi.R_end
-    400000: Arm1.L
-    400002: Arm1.R
-    400004: Arm2.L
-    400006: Arm2.R
-    400008: Elbow_ctrl.L
-    400010: Elbow_ctrl.L_end
-    400012: Elbow_ctrl.R
-    400014: Elbow_ctrl.R_end
-    400016: Ent_Base
-    400018: Finger1_hi.L
-    400020: Finger1_hi.L_end
-    400022: Finger1_hi.R
-    400024: Finger1_hi.R_end
-    400026: Finger2_hi.L
-    400028: Finger2_hi.L_end
-    400030: Finger2_hi.R
-    400032: Finger2_hi.R_end
-    400034: Foot.L
-    400036: Foot.L_end
-    400038: Foot.R
-    400040: Foot.R_end
-    400042: Foot_IK.L
-    400044: Foot_IK.R
-    400046: Golem
-    400048: Golem_Armature
-    400050: Golem_ice_parts
-    400052: Golem_St_finers
-    400054: //RootNode
-    400056: Hand_IK.L
-    400058: Hand_IK.R
-    400060: Head
-    400062: Head_end
-    400064: Knee_ctrl.L
-    400066: Knee_ctrl.L_end
-    400068: Knee_ctrl.R
-    400070: Knee_ctrl.R_end
-    400072: Leg_end.L
-    400074: Leg_end.R
-    400076: Leg_hi.L
-    400078: Leg_hi.R
-    400080: Spine
-    400082: Thumb_hi.L
-    400084: Thumb_hi.L_end
-    400086: Thumb_hi.R
-    400088: Thumb_hi.R_end
-    4300000: Golem_ice_parts
-    4300002: Golem_St_finers
-    4300004: Golem
-    7400000: Golem_Armature|Ent_ArmatureAction
-    7400002: walk
-    7400004: walk_fast
-    7400006: idle
-    7400008: idle_battle
-    7400010: attack1
-    7400012: attack2
-    7400014: power_attack
-    7400016: cast1
-    7400018: cast2
-    7400020: stomp
-    7400022: defence_start
-    7400024: defence_end
-    7400026: hit1
-    7400028: hit2
-    7400030: death1
-    7400032: death2
-    9500000: //RootNode
-    13700000: Golem
-    13700002: Golem_ice_parts
-    13700004: Golem_St_finers
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm1.L
+  - first:
+      1: 100002
+    second: Arm1.R
+  - first:
+      1: 100004
+    second: Arm2.L
+  - first:
+      1: 100006
+    second: Arm2.R
+  - first:
+      1: 100008
+    second: Elbow_ctrl.L
+  - first:
+      1: 100010
+    second: Elbow_ctrl.L_end
+  - first:
+      1: 100012
+    second: Elbow_ctrl.R
+  - first:
+      1: 100014
+    second: Elbow_ctrl.R_end
+  - first:
+      1: 100016
+    second: Ent_Base
+  - first:
+      1: 100018
+    second: Finger1_hi.L
+  - first:
+      1: 100020
+    second: Finger1_hi.L_end
+  - first:
+      1: 100022
+    second: Finger1_hi.R
+  - first:
+      1: 100024
+    second: Finger1_hi.R_end
+  - first:
+      1: 100026
+    second: Finger2_hi.L
+  - first:
+      1: 100028
+    second: Finger2_hi.L_end
+  - first:
+      1: 100030
+    second: Finger2_hi.R
+  - first:
+      1: 100032
+    second: Finger2_hi.R_end
+  - first:
+      1: 100034
+    second: Foot.L
+  - first:
+      1: 100036
+    second: Foot.L_end
+  - first:
+      1: 100038
+    second: Foot.R
+  - first:
+      1: 100040
+    second: Foot.R_end
+  - first:
+      1: 100042
+    second: Foot_IK.L
+  - first:
+      1: 100044
+    second: Foot_IK.R
+  - first:
+      1: 100046
+    second: Golem
+  - first:
+      1: 100048
+    second: Golem_Armature
+  - first:
+      1: 100050
+    second: Golem_ice_parts
+  - first:
+      1: 100052
+    second: Golem_St_finers
+  - first:
+      1: 100054
+    second: //RootNode
+  - first:
+      1: 100056
+    second: Hand_IK.L
+  - first:
+      1: 100058
+    second: Hand_IK.R
+  - first:
+      1: 100060
+    second: Head
+  - first:
+      1: 100062
+    second: Head_end
+  - first:
+      1: 100064
+    second: Knee_ctrl.L
+  - first:
+      1: 100066
+    second: Knee_ctrl.L_end
+  - first:
+      1: 100068
+    second: Knee_ctrl.R
+  - first:
+      1: 100070
+    second: Knee_ctrl.R_end
+  - first:
+      1: 100072
+    second: Leg_end.L
+  - first:
+      1: 100074
+    second: Leg_end.R
+  - first:
+      1: 100076
+    second: Leg_hi.L
+  - first:
+      1: 100078
+    second: Leg_hi.R
+  - first:
+      1: 100080
+    second: Spine
+  - first:
+      1: 100082
+    second: Thumb_hi.L
+  - first:
+      1: 100084
+    second: Thumb_hi.L_end
+  - first:
+      1: 100086
+    second: Thumb_hi.R
+  - first:
+      1: 100088
+    second: Thumb_hi.R_end
+  - first:
+      4: 400000
+    second: Arm1.L
+  - first:
+      4: 400002
+    second: Arm1.R
+  - first:
+      4: 400004
+    second: Arm2.L
+  - first:
+      4: 400006
+    second: Arm2.R
+  - first:
+      4: 400008
+    second: Elbow_ctrl.L
+  - first:
+      4: 400010
+    second: Elbow_ctrl.L_end
+  - first:
+      4: 400012
+    second: Elbow_ctrl.R
+  - first:
+      4: 400014
+    second: Elbow_ctrl.R_end
+  - first:
+      4: 400016
+    second: Ent_Base
+  - first:
+      4: 400018
+    second: Finger1_hi.L
+  - first:
+      4: 400020
+    second: Finger1_hi.L_end
+  - first:
+      4: 400022
+    second: Finger1_hi.R
+  - first:
+      4: 400024
+    second: Finger1_hi.R_end
+  - first:
+      4: 400026
+    second: Finger2_hi.L
+  - first:
+      4: 400028
+    second: Finger2_hi.L_end
+  - first:
+      4: 400030
+    second: Finger2_hi.R
+  - first:
+      4: 400032
+    second: Finger2_hi.R_end
+  - first:
+      4: 400034
+    second: Foot.L
+  - first:
+      4: 400036
+    second: Foot.L_end
+  - first:
+      4: 400038
+    second: Foot.R
+  - first:
+      4: 400040
+    second: Foot.R_end
+  - first:
+      4: 400042
+    second: Foot_IK.L
+  - first:
+      4: 400044
+    second: Foot_IK.R
+  - first:
+      4: 400046
+    second: Golem
+  - first:
+      4: 400048
+    second: Golem_Armature
+  - first:
+      4: 400050
+    second: Golem_ice_parts
+  - first:
+      4: 400052
+    second: Golem_St_finers
+  - first:
+      4: 400054
+    second: //RootNode
+  - first:
+      4: 400056
+    second: Hand_IK.L
+  - first:
+      4: 400058
+    second: Hand_IK.R
+  - first:
+      4: 400060
+    second: Head
+  - first:
+      4: 400062
+    second: Head_end
+  - first:
+      4: 400064
+    second: Knee_ctrl.L
+  - first:
+      4: 400066
+    second: Knee_ctrl.L_end
+  - first:
+      4: 400068
+    second: Knee_ctrl.R
+  - first:
+      4: 400070
+    second: Knee_ctrl.R_end
+  - first:
+      4: 400072
+    second: Leg_end.L
+  - first:
+      4: 400074
+    second: Leg_end.R
+  - first:
+      4: 400076
+    second: Leg_hi.L
+  - first:
+      4: 400078
+    second: Leg_hi.R
+  - first:
+      4: 400080
+    second: Spine
+  - first:
+      4: 400082
+    second: Thumb_hi.L
+  - first:
+      4: 400084
+    second: Thumb_hi.L_end
+  - first:
+      4: 400086
+    second: Thumb_hi.R
+  - first:
+      4: 400088
+    second: Thumb_hi.R_end
+  - first:
+      43: 4300000
+    second: Golem_ice_parts
+  - first:
+      43: 4300002
+    second: Golem_St_finers
+  - first:
+      43: 4300004
+    second: Golem
+  - first:
+      74: 7400000
+    second: Golem_Armature|Ent_ArmatureAction
+  - first:
+      74: 7400002
+    second: walk
+  - first:
+      74: 7400004
+    second: walk_fast
+  - first:
+      74: 7400006
+    second: idle
+  - first:
+      74: 7400008
+    second: idle_battle
+  - first:
+      74: 7400010
+    second: attack1
+  - first:
+      74: 7400012
+    second: attack2
+  - first:
+      74: 7400014
+    second: power_attack
+  - first:
+      74: 7400016
+    second: cast1
+  - first:
+      74: 7400018
+    second: cast2
+  - first:
+      74: 7400020
+    second: stomp
+  - first:
+      74: 7400022
+    second: defence_start
+  - first:
+      74: 7400024
+    second: defence_end
+  - first:
+      74: 7400026
+    second: hit1
+  - first:
+      74: 7400028
+    second: hit2
+  - first:
+      74: 7400030
+    second: death1
+  - first:
+      74: 7400032
+    second: death2
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Golem
+  - first:
+      137: 13700002
+    second: Golem_ice_parts
+  - first:
+      137: 13700004
+    second: Golem_St_finers
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Golem_Armature|Ent_ArmatureAction
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 0
       lastFrame: 528
       wrapMode: 0
@@ -149,6 +385,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -255,9 +492,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: walk
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 10
       lastFrame: 50
       wrapMode: 0
@@ -265,6 +504,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
@@ -371,9 +611,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: walk_fast
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 60
       lastFrame: 90
       wrapMode: 0
@@ -381,6 +623,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
@@ -487,9 +730,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: idle
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 100
       lastFrame: 150
       wrapMode: 0
@@ -497,6 +742,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
@@ -603,9 +849,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: idle_battle
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 160
       lastFrame: 190
       wrapMode: 0
@@ -613,6 +861,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
@@ -719,9 +968,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: attack1
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 190
       lastFrame: 210
       wrapMode: 0
@@ -729,6 +980,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -835,9 +1087,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: attack2
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 210
       lastFrame: 230
       wrapMode: 0
@@ -845,6 +1099,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -951,9 +1206,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: power_attack
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 230
       lastFrame: 260
       wrapMode: 0
@@ -961,6 +1218,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1067,9 +1325,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: cast1
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 260
       lastFrame: 300
       wrapMode: 0
@@ -1077,6 +1337,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1183,9 +1444,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: cast2
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 300
       lastFrame: 330
       wrapMode: 0
@@ -1193,6 +1456,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1299,9 +1563,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: stomp
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 330
       lastFrame: 395
       wrapMode: 0
@@ -1309,6 +1575,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1415,9 +1682,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: defence_start
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 395
       lastFrame: 405
       wrapMode: 0
@@ -1425,6 +1694,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1531,9 +1801,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: defence_end
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 405
       lastFrame: 420
       wrapMode: 0
@@ -1541,6 +1813,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1647,9 +1920,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: hit1
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 420
       lastFrame: 435
       wrapMode: 0
@@ -1657,6 +1932,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1763,9 +2039,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: hit2
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 435
       lastFrame: 450
       wrapMode: 0
@@ -1773,6 +2051,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1879,9 +2158,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: death1
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 450
       lastFrame: 480
       wrapMode: 0
@@ -1889,6 +2170,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1901,7 +2183,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 1
+        functionName: DestroyEnemy
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 31a57de47729c1f4ba432c3052338e5a, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -1995,9 +2284,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: death2
       takeName: Golem_Armature|Ent_ArmatureAction
+      internalID: 0
       firstFrame: 490
       lastFrame: 528
       wrapMode: 0
@@ -2005,6 +2296,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2111,44 +2403,74 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

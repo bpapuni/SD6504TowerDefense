@@ -120,8 +120,14 @@ public class Enemy : MonoBehaviour
         if(health <= 0)  
         {
             status.UpdateGold(goldReward);
-            Destroy(gameObject);
+            speed = 0;
+            gameObject.GetComponent<Animator>().SetTrigger("die");
         }
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
     public void FrostSlow()
