@@ -670,7 +670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9fea175a462bfd4db012ab50769e3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 5892881397518447121}
   slider: {fileID: 7701558077926401586}
 --- !u!1 &3514412240615456137
 GameObject:
@@ -773,7 +772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
   healthBar: {fileID: 5084620263436870327}
 --- !u!1 &4444237618743762269
 GameObject:
@@ -1125,7 +1123,7 @@ GameObject:
   - component: {fileID: 2543105226958607617}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: HealthBarCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

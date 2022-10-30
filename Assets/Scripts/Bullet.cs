@@ -53,7 +53,6 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(damage);
-
         }
     }
 }

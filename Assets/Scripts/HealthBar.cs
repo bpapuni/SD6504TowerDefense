@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,11 @@ public class HealthBar : MonoBehaviour
 
     public GameObject healthBar;
     public Slider slider;
+    private Coroutine displayHealthBar;
 
     public void Start()
     {
-        healthBar = GameObject.FindGameObjectWithTag("HealthBarCanvas");
-        healthBar.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void SetMaxHealth(int health)
@@ -23,9 +24,21 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(int health)
     {
-        healthBar.SetActive(true);
-        System.Threading.Thread.Sleep(3000);
-        healthBar.SetActive(false);
+        gameObject.SetActive(true);
         slider.value = health;
+        if (displayHealthBar == null)
+            displayHealthBar = StartCoroutine(DisplayHealthBar());
+        else
+        {
+            StopCoroutine(displayHealthBar);
+            displayHealthBar = StartCoroutine(DisplayHealthBar());
+        }
+    }
+
+    IEnumerator DisplayHealthBar()
+    {
+        yield return new WaitForSeconds(3);
+        gameObject.SetActive(false);
+        displayHealthBar = null;
     }
 }
