@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     private int health;
 
+
+    public Status status = new Status();
     public HealthBar healthBar;
 
     void Start()
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour
             if (waypointIndex == Waypoints.waypoints.Length - 2)
             {
                 Destroy(gameObject);
+                Status.UpdateLives(1);
                 return;
             }
 
@@ -62,7 +65,10 @@ public class Enemy : MonoBehaviour
         {
             if (waypointIndex == 30)
             {
+                
                 Destroy(gameObject);
+                Status.UpdateLives(1);
+                
                 return;
             }
 

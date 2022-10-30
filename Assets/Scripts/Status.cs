@@ -12,6 +12,10 @@ public class Status : MonoBehaviour
     private Text GoldAmount;
     private Text StatusMessage;
 
+    public static int lives;
+    public static Text LivesAmount;
+    
+
 
 
     void Awake()
@@ -28,12 +32,15 @@ public class Status : MonoBehaviour
     void Start()
     {
 
-
+        lives = 20;
+        
 
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectsWithTag("StatusText")[0].GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectsWithTag("StatusText")[1].GetComponent<Text>();
+        LivesAmount = GameObject.FindGameObjectsWithTag("StatusText")[2].GetComponent<Text>();
         UpdateGold(0);
+        UpdateLives(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
 
 
@@ -54,6 +61,17 @@ public class Status : MonoBehaviour
     {
         gold += goldChange;
         GoldAmount.text = gold.ToString();
+    }
+
+
+    public static void UpdateLives(int livesChange)
+    {
+        lives -= livesChange;
+        LivesAmount.text = lives.ToString();
+        if(lives <= 0)
+        {
+            GameManager.EndGame();
+        }
     }
 
     public void ShowMessage(string message)

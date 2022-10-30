@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Debug.Log("Game Paused");
+        
         Time.timeScale = 0f;
         playBtn.SetActive(true);
         pauseBtn.SetActive(false);
@@ -40,10 +40,23 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        Debug.Log("Game Play");
+        
         Time.timeScale = 1f;
         playBtn.SetActive(false);
         pauseBtn.SetActive(true);
 
+    }
+
+    public static void EndGame()
+    {
+
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("EndGame");
+
+    }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
