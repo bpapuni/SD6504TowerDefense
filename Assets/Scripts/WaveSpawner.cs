@@ -97,10 +97,7 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave(Wave _wave)
     {
-        //Debug.Log("Spawning Wave: " + _wave.waveName);
         state = SpawnState.SPAWNING;
-
-        //Spawn
         for(int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemy);
@@ -113,8 +110,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform _enemy)
     {
-        //Debug.Log("Spawning Enemy");
-
         Transform spawn1 = GameObject.FindGameObjectWithTag("Spawn1").transform;
         
         if (level == 1)

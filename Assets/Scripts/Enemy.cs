@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
         target = Waypoints.waypoints[waypointIndex];
 
         waveSpawner = WaveSpawner.instance;
+        if (waveSpawner.waveIndex >= 7)
+            speed = speed * 1.5f;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
         healthBar.SetMaxHealth(health);
     }
@@ -37,7 +39,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
-        transform.Translate(dir.normalized * speed/2 * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * speed / 3 * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
