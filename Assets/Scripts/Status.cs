@@ -38,6 +38,7 @@ public class Status : MonoBehaviour
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectWithTag("StatusText").GetComponent<Text>();
+        LivesAmount = GameObject.FindGameObjectWithTag("LivesText").GetComponent<Text>();
         UpdateGold(0);
         UpdateLives(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);

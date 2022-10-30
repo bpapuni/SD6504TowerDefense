@@ -23,6 +23,7 @@ TagManager:
   - PlayBtn
   - PauseBtn
   - GoldText
+  - LivesText
   layers:
   - Default
   - TransparentFX
