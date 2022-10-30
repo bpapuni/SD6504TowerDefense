@@ -6,18 +6,22 @@ using UnityEngine.UI;
 public class TowerSelect : MonoBehaviour
 {
     BuildManager buildManager;
+    GameManager gameManager;
     Status status;
     private Image border;
 
     void Start()
     {
         buildManager = BuildManager.instance;
+        gameManager = GameManager.instance;
         status = Status.instance;
         border = transform.parent.GetComponentInChildren<Image>();
     }
 
     public void PurchaseBallistaTower()
     {
+        if (gameManager.paused)
+            return;
         buildManager.SetPendingTower(buildManager.PendingBallistaTower);
         buildManager.SetTowerToBuild(buildManager.BallistaTower);
         buildManager.ShowPendingTower();
@@ -26,6 +30,8 @@ public class TowerSelect : MonoBehaviour
 
     public void PurchaseFrostTower()
     {
+        if (gameManager.paused)
+            return;
         buildManager.SetPendingTower(buildManager.PendingFrostTower);
         buildManager.SetTowerToBuild(buildManager.FrostTower);
         buildManager.ShowPendingTower();
@@ -34,6 +40,8 @@ public class TowerSelect : MonoBehaviour
 
     public void PurchaseTinyTower()
     {
+        if (gameManager.paused)
+            return;
         buildManager.SetPendingTower(buildManager.PendingTinyTower);
         buildManager.SetTowerToBuild(buildManager.TinyTower);
         buildManager.ShowPendingTower();
@@ -42,6 +50,8 @@ public class TowerSelect : MonoBehaviour
 
     public void ConfirmPurchaseTower()
     {
+        if (gameManager.paused)
+            return;
         int TowerCost = 0;
         GameObject towerToBuild = buildManager.GetTowerToBuild();
 
@@ -67,6 +77,8 @@ public class TowerSelect : MonoBehaviour
 
     public void ConfirmDeleteTower()
     {
+        if (gameManager.paused)
+            return;
         int TowerCost = 0;
         GameObject towerToDelete = buildManager.selectedTower;
 
@@ -84,6 +96,8 @@ public class TowerSelect : MonoBehaviour
 
     public void CancelSelect()
     {
+        if (gameManager.paused)
+            return;
         // Fires if confirmTowerDelete scene is active
         if (buildManager.selectedTower != null)
             buildManager.CancelDelete();
@@ -102,11 +116,15 @@ public class TowerSelect : MonoBehaviour
 
     public void ShowHighlight()
     {
+        if (gameManager.paused)
+            return;
         border.color = new Color(0, 255, 0, 1);
     }
 
     public void HideHighlight()
     {
+        if (gameManager.paused)
+            return;
         border.color = new Color(255, 255, 255, 1);
     }
 }

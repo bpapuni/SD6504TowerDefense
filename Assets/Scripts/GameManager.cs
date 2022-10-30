@@ -5,10 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    Status status;
+    public bool paused = false;
 
-    private bool paused = false;
 
-    void Update()
+    public void Start()
+    {
+        instance = this;
+        status = Status.instance;
+    }
+
+    public void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
@@ -41,16 +49,15 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         paused = true;
+        status.TogglePlayPause(paused);
         Time.timeScale = 0f;
-
-
     }
 
     public void PlayGame()
     {
         paused = false;
+        status.TogglePlayPause(paused);
         Time.timeScale = 1f;
-
     }
 
     public static void EndGame()

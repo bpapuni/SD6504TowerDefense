@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     BuildManager buildManager;
-    Status status;
+    GameManager gameManager;
     private Transform target;
 
     [Header("Attributes")]
@@ -31,9 +31,9 @@ public class Tower : MonoBehaviour
     void Awake()
     {
         buildManager = BuildManager.instance;
+        gameManager = GameManager.instance;
         buildPlate = buildManager.selectedPlate;
         bpRend = buildPlate.GetComponent<Renderer>();
-        status = Status.instance;
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
         for (int i = 0; i < rend.Length; i++)
@@ -66,7 +66,7 @@ public class Tower : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         for (int i = 0; i < rend.Length; i++)
@@ -77,7 +77,7 @@ public class Tower : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         for (int i = 0; i < rend.Length; i++)
@@ -88,7 +88,7 @@ public class Tower : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         buildManager.selectedPlate = buildPlate;

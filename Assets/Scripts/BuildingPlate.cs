@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingPlate : MonoBehaviour
 {
     BuildManager buildManager;
+    GameManager gameManager;
     Status status;
 
     public enum plateType { NORMAL, FIRE, RANGE, SPEED };
@@ -21,6 +22,7 @@ public class BuildingPlate : MonoBehaviour
     private void Start()
     {
         buildManager = BuildManager.instance;
+        gameManager = GameManager.instance;
         status = Status.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
@@ -52,7 +54,7 @@ public class BuildingPlate : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (tower != null || buildManager.selectedPlate != null)
+        if (tower != null || buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         rend.material.color = hoverColor;
@@ -67,7 +69,7 @@ public class BuildingPlate : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         rend.material.color = startColor;
@@ -77,7 +79,7 @@ public class BuildingPlate : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (tower != null || buildManager.selectedPlate != null)
+        if (tower != null || buildManager.selectedPlate != null || gameManager.paused)
             return;
 
         towerChoiceScene.SetActive(true);

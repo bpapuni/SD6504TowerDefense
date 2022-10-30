@@ -8,15 +8,13 @@ public class Status : MonoBehaviour
     WaveSpawner waveSpawner;
     [Header("Starting Gold")]
     public int gold;
+    public int lives;
 
     private Text GoldAmount;
     private Text StatusMessage;
-
-    public static int lives;
-    public static Text LivesAmount;
-    
-
-
+    private Text LivesAmount;
+    private Image Play;
+    private Image Pause;
 
     void Awake()
     {
@@ -31,14 +29,13 @@ public class Status : MonoBehaviour
 
     void Start()
     {
-
-        lives = 20;
-        
-
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectWithTag("StatusText").GetComponent<Text>();
         LivesAmount = GameObject.FindGameObjectWithTag("LivesText").GetComponent<Text>();
+        Play = GameObject.FindGameObjectsWithTag("PlayPause")[0].GetComponent<Image>();
+        Pause = GameObject.FindGameObjectsWithTag("PlayPause")[1].GetComponent<Image>();
+        Play.gameObject.SetActive(false);
         UpdateGold(0);
         UpdateLives(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
@@ -64,11 +61,11 @@ public class Status : MonoBehaviour
     }
 
 
-    public static void UpdateLives(int livesChange)
+    public void UpdateLives(int livesChange)
     {
         lives -= livesChange;
-        //LivesAmount.text = lives.ToString();
-        if(lives <= 0)
+        LivesAmount.text = lives.ToString();
+        if (lives <= 0)
         {
             GameManager.EndGame();
         }
@@ -96,5 +93,17 @@ public class Status : MonoBehaviour
         StatusMessage.text = "";
     }
 
-
+    public void TogglePlayPause(bool paused)
+    {
+        if (paused)
+        {
+            Play.gameObject.SetActive(true);
+            Pause.gameObject.SetActive(false);
+        }
+        else
+        {
+            Play.gameObject.SetActive(false);
+            Pause.gameObject.SetActive(true);
+        }
+    }
 }

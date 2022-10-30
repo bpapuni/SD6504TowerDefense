@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     WaveSpawner waveSpawner;
+    Status status;
     public float speed;
 
     private int level;
@@ -13,7 +14,6 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     private int health;
 
-    public Status status = new Status();
     public HealthBar healthBar;
 
     void Start()
@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
         target = Waypoints.waypoints[waypointIndex];
 
         waveSpawner = WaveSpawner.instance;
+        status = Status.instance;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
         healthBar.SetMaxHealth(health);
     }
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour
             if (waypointIndex == Waypoints.waypoints.Length - 2)
             {
                 Destroy(gameObject);
-                Status.UpdateLives(1);
+                status.UpdateLives(1);
                 return;
             }
 
@@ -65,8 +66,8 @@ public class Enemy : MonoBehaviour
             if (waypointIndex == 30)
             {
                 Destroy(gameObject);
-                Status.UpdateLives(1);
-                
+                status.UpdateLives(1);
+
                 return;
             }
 
