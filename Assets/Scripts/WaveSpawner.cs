@@ -16,7 +16,14 @@ public class WaveSpawner : MonoBehaviour
         public int health;
         public int count;
         public float rate;
+
+        public int GetHealth()
+        {
+            return health;
+        }
     }
+
+
 
     public Wave[] waves;
     public int waveIndex = 0;
@@ -123,5 +130,6 @@ public class WaveSpawner : MonoBehaviour
         else
             Instantiate(_enemy, spawn1.transform.position, spawn1.transform.rotation);
     }
+
 
 }

@@ -40,7 +40,23 @@ public class Bullet : MonoBehaviour
             GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
             Destroy(effectIns, 2f);
         }
+
         Destroy(gameObject);
 
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        {
+            enemyComponent.TakeDamage(20);
+            
+        }
+
+        
+      
+    }
+
+
 }
