@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("HealthBarCanvas");
-        healthBar.SetActive(false);
+        
     }
 
     public void SetMaxHealth(int health)

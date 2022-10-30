@@ -20,9 +20,18 @@ TagManager:
 =======
   - PendingTower
   - StatusText
+<<<<<<< Updated upstream
   - TowerCostText
   - FxTemporaire
   - Weapon
+>>>>>>> Stashed changes
+=======
+  - Spawn2
+  - Spawn1
+  - BuildingPlate
+  - Flags
+  - Enemy
+  - HealthBarCanvas
 >>>>>>> Stashed changes
   layers:
   - Default
