@@ -97,11 +97,13 @@ public class Status : MonoBehaviour
     {
         if (paused)
         {
+            ShowMessage("Game Paused");
             Play.gameObject.SetActive(true);
             Pause.gameObject.SetActive(false);
         }
         else
         {
+            ShowMessage("Game Resumed", 3);
             Play.gameObject.SetActive(false);
             Pause.gameObject.SetActive(true);
         }
