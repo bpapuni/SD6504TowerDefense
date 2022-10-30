@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 2896304142502862824}
   - component: {fileID: 3157660491050709362}
   m_Layer: 0
-  m_Name: Manfrog 1
+  m_Name: Enemy - Manfrog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

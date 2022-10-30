@@ -1921,7 +1921,7 @@ GameObject:
   - component: {fileID: 1329537164763953484}
   - component: {fileID: 3630987316569102630}
   m_Layer: 0
-  m_Name: Ogre 1
+  m_Name: Enemy - Ogre
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

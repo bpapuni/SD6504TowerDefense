@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 3479212573019907737}
   - component: {fileID: 5858324040225290033}
   m_Layer: 0
-  m_Name: Stoon The Destroyer 1
+  m_Name: Enemy - Stoon The Destroyer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 2633134357226597935}
   - component: {fileID: 5613096637622570459}
   m_Layer: 0
-  m_Name: TinyTower
+  m_Name: Tower - Tiny
   m_TagString: TinyTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

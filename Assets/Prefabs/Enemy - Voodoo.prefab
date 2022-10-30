@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 4663126865850887763}
   - component: {fileID: 315859698582938055}
   m_Layer: 0
-  m_Name: Goblin 1
+  m_Name: Enemy - Voodoo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

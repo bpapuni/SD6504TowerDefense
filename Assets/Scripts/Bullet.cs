@@ -13,15 +13,15 @@ public class Bullet : MonoBehaviour
 
     public void Awake()
     {
-        if (gameObject.name == "Arrow(Clone)")
+        if (gameObject.name == "Bullet - Arrow(Clone)")
         {
             damage = GameObject.FindGameObjectWithTag("BallistaTower").GetComponent<Tower>().damage;
         }
-        else if (gameObject.name == "FrostBullet(Clone)")
+        else if (gameObject.name == "Bullet - Frost(Clone)")
         {
             damage = GameObject.FindGameObjectWithTag("FrostTower").GetComponent<Tower>().damage;
         }
-        else if (gameObject.name == "CannonBall(Clone)")
+        else if (gameObject.name == "Bullet - CannonBall(Clone)")
         {
             damage = GameObject.FindGameObjectWithTag("TinyTower").GetComponent<Tower>().damage;
         }
@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
             Destroy(effectIns, 2f);
         }
 
-        if (gameObject.name == "CannonBall(Clone)")
+        if (gameObject.name == "Bullet - CannonBall(Clone)")
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach(GameObject enemy in enemies)
@@ -71,7 +71,7 @@ public class Bullet : MonoBehaviour
                     enemy.GetComponent<Enemy>().TakeDamage(damage);
             }
         }
-        else if (gameObject.name == "FrostBullet(Clone)")
+        else if (gameObject.name == "Bullet - Frost(Clone)")
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject enemy in enemies)

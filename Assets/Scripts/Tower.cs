@@ -16,7 +16,7 @@ public class Tower : MonoBehaviour
 
     [Header("Unity Fields")]
     public Transform partToRotate;
-    public float turnSpeed = 10f;
+    public float turnSpeed;
     public GameObject Bullet;
     public Transform firePoint;
     public Color hoverColor;
