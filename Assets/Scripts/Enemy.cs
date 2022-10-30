@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     private int health;
 
+    public Status status = new Status();
     public HealthBar healthBar;
 
     void Start()
@@ -27,8 +28,6 @@ public class Enemy : MonoBehaviour
         target = Waypoints.waypoints[waypointIndex];
 
         waveSpawner = WaveSpawner.instance;
-        if (waveSpawner.waveIndex >= 7)
-            speed = speed * 1.5f;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
         healthBar.SetMaxHealth(health);
     }
@@ -39,7 +38,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
-        transform.Translate(dir.normalized * speed / 3 * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * speed/2 * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
@@ -54,6 +53,7 @@ public class Enemy : MonoBehaviour
             if (waypointIndex == Waypoints.waypoints.Length - 2)
             {
                 Destroy(gameObject);
+                Status.UpdateLives(1);
                 return;
             }
 
@@ -65,6 +65,8 @@ public class Enemy : MonoBehaviour
             if (waypointIndex == 30)
             {
                 Destroy(gameObject);
+                Status.UpdateLives(1);
+                
                 return;
             }
 
@@ -87,7 +89,7 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         healthBar.SetHealth(health);
-        if(health <= 0)
+        if(health <= 0)  
         {
             Destroy(gameObject);
         }
