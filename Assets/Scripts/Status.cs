@@ -33,8 +33,8 @@ public class Status : MonoBehaviour
         GoldAmount = GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectWithTag("StatusText").GetComponent<Text>();
         LivesAmount = GameObject.FindGameObjectWithTag("LivesText").GetComponent<Text>();
-        Play = GameObject.FindGameObjectsWithTag("PlayPause")[0].GetComponent<Image>();
-        Pause = GameObject.FindGameObjectsWithTag("PlayPause")[1].GetComponent<Image>();
+        Play = GameObject.FindGameObjectWithTag("Play").GetComponent<Image>();
+        Pause = GameObject.FindGameObjectWithTag("Pause").GetComponent<Image>();
         Play.gameObject.SetActive(false);
         UpdateGold(0);
         UpdateLives(0);
