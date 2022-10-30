@@ -12,8 +12,15 @@ public class Enemy : MonoBehaviour
 
     private int level;
     private Transform target;
+<<<<<<< Updated upstream
     private int wavepointIndex = 0;
     
+=======
+    private int waypointIndex = 0;
+    public int health;
+
+    public HealthBar healthBar;
+>>>>>>> Stashed changes
 
     void Start()
     {
@@ -29,6 +36,12 @@ public class Enemy : MonoBehaviour
         WaveSpawner waveSpawner = WaveSpawner.instance;
         enemyHealth = waveSpawner.waves[waveSpawner.waveIndex].health;
 
+<<<<<<< Updated upstream
+=======
+        waveSpawner = WaveSpawner.instance;
+        health = waveSpawner.waves[waveSpawner.waveIndex].health;
+        healthBar.SetMaxHealth(health);
+>>>>>>> Stashed changes
     }
 
 
@@ -85,11 +98,18 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+<<<<<<< Updated upstream
 
         
         
         enemyHealth -= damage;
         if(enemyHealth <= 0)
+=======
+        health -= damage;
+        healthBar.SetHealth(health);
+        
+        if(health <= 0)
+>>>>>>> Stashed changes
         {
             Destroy(gameObject);
         }
