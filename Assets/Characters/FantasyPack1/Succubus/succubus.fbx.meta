@@ -4293,7 +4293,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.51014495
+      - time: 0.6869565
         functionName: DestroyEnemy
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 31a57de47729c1f4ba432c3052338e5a, type: 3}
