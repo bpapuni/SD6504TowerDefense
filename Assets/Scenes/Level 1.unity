@@ -67755,7 +67755,7 @@ MonoBehaviour:
     enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 300
     count: 6
-    rate: 2
+    rate: 1
   - waveName: 'Wave 3: The Ogres'
     enemy: {fileID: 4510786162001720718, guid: 1f697c415f5b1744581ed05368de865c, type: 3}
     health: 300
@@ -67770,32 +67770,32 @@ MonoBehaviour:
     enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 600
     count: 6
-    rate: 1.5
+    rate: 1
   - waveName: 'Wave 6: Ogre Round 2'
     enemy: {fileID: 4510786162001720718, guid: 1f697c415f5b1744581ed05368de865c, type: 3}
     health: 600
     count: 6
-    rate: 1.25
+    rate: 3
   - waveName: 'Wave 7: Boss'
     enemy: {fileID: 3256486040320684351, guid: 60c0ad95e83289643b67882bd1157612, type: 3}
     health: 5400
     count: 1
-    rate: 1.5
+    rate: 1
   - waveName: 'Wave 8: '
     enemy: {fileID: 6551975550422907330, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
     health: 900
     count: 6
-    rate: 1.5
+    rate: 0.8
   - waveName: 'Wave 10: '
     enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 900
     count: 6
-    rate: 1.5
+    rate: 0.8
   - waveName: 'Wave 11: '
     enemy: {fileID: 4510786162001720718, guid: 1f697c415f5b1744581ed05368de865c, type: 3}
     health: 900
     count: 6
-    rate: 1.5
+    rate: 2.4
   waveIndex: 0
   timeBetweenWaves: 5
   waveCountdown: 0
@@ -67858,7 +67858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f4dbd842a6a2640b808250a7228ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 300
+  gold: 500
   lives: 20
 --- !u!114 &1927251558
 MonoBehaviour:
