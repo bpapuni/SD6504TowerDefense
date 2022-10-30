@@ -22,6 +22,7 @@ TagManager:
   - HelpMenu
   - PlayBtn
   - PauseBtn
+  - GoldText
   layers:
   - Default
   - TransparentFX
