@@ -37,7 +37,15 @@ public class Enemy : MonoBehaviour
         waveSpawner = WaveSpawner.instance;
         status = Status.instance;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
+
+        if (waveSpawner.waveIndex >= 7)
+            speed = speed * 1.5f;
         ogSpeed = speed;
+
+        // Gain 20% size for every 300 health above baseline
+        float sizeMultiplier = 1 + (-1 + health / 300) * 0.2f;
+
+        transform.localScale = transform.localScale * sizeMultiplier;
 
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
