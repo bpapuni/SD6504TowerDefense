@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     private int health;
 
+    public HealthBar healthBar;
+
     void Start()
     {
         level = SceneManager.GetActiveScene().name == "Level 1" ? 1 : 2;
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour
 
         waveSpawner = WaveSpawner.instance;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
+        healthBar.SetMaxHealth(health);
     }
 
 
@@ -81,6 +84,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth(health);
         if(health <= 0)
         {
             Destroy(gameObject);
