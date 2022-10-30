@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Transform target;
     public float speed = 70f;
     public int damage;
+    public int splashRadius;
     public GameObject impactEffect;
 
     public void Seek (Transform _target)
@@ -43,19 +44,20 @@ public class Bullet : MonoBehaviour
             Destroy(effectIns, 2f);
         }
 
-        Destroy(gameObject);
-
-    }
-
-    private void OnTriggerEnter(Collider collision)
-    {
-
-        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if (gameObject.name == "CannonBall(Clone)")
         {
-            enemyComponent.TakeDamage(damage);
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach(GameObject enemy in enemies)
+            {
+                float distanceSqr = (target.transform.position - enemy.transform.position).sqrMagnitude;
+                if (distanceSqr < Mathf.PI * Mathf.Pow(splashRadius, 2) )
+                    enemy.GetComponent<Enemy>().TakeDamage(damage);
+            }
         }
+        else
+            target.GetComponent<Enemy>().TakeDamage(damage);
 
-       
+        Destroy(gameObject);
 
     }
 }
