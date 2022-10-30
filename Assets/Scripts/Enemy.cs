@@ -94,7 +94,15 @@ public class Enemy : MonoBehaviour
 
             target = Waypoints.waypoints[wavepointIndex];
         }
+    }
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDamage(int damage)
