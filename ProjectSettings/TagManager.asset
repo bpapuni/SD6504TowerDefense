@@ -17,6 +17,7 @@ TagManager:
   - BuildingPlate
   - Flags
   - Enemy
+  - HealthBarCanvas
   layers:
   - Default
   - TransparentFX

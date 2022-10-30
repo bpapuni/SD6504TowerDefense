@@ -11055,7 +11055,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &640874682
 MeshCollider:
@@ -18899,7 +18898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1124082936
 MeshCollider:
@@ -23721,7 +23719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1400946350
 MeshCollider:
@@ -24205,7 +24202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1412312180
 MeshCollider:
@@ -31651,7 +31647,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1856365824
 MeshCollider:
@@ -33684,7 +33679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  towerChoiceScene: {fileID: 970703816}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 1}
 --- !u!64 &1946710120
 MeshCollider:
