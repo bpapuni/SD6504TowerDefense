@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public bool paused = false;
 
 
-    public void Start()
+    public void Awake()
     {
         instance = this;
         status = Status.instance;

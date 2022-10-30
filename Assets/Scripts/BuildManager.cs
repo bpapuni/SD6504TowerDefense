@@ -24,6 +24,7 @@ public class BuildManager : MonoBehaviour
     public GameObject confirmTowerDelete;
 
     private GameObject pendingTower;
+    private float pendingTowerRange;
     private GameObject towerToBuild;
     public GameObject rangeIndicator;
     public GameObject bonusRangeIndicator;
@@ -88,18 +89,20 @@ public class BuildManager : MonoBehaviour
     public void SetTowerToBuild(GameObject tower)
     {
         towerToBuild = tower;
+        pendingTowerRange = tower.GetComponent<Tower>().range;
     }
 
     public void ShowPendingTower()
     {
         Vector3 rangeIndLoc = new Vector3(selectedPlate.transform.position.x, 0f, selectedPlate.transform.position.z);
         rangeIndicator = Instantiate(rangeIndicatorObj, rangeIndLoc, selectedPlate.transform.rotation);
+        rangeIndicator.transform.localScale = new Vector3(pendingTowerRange*2, 0.1f, pendingTowerRange*2);
         pendingTower = Instantiate(pendingTower, selectedPlate.transform.position, selectedPlate.transform.rotation);
 
         if (selectedPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.RANGE)
         {
             bonusRangeIndicator = Instantiate(rangeIndicatorObj, rangeIndLoc, selectedPlate.transform.rotation);
-            bonusRangeIndicator.transform.localScale = new Vector3(30f, 0.1f, 30f) * 1.2f;
+            bonusRangeIndicator.transform.localScale = new Vector3(pendingTowerRange*2, 0.1f, pendingTowerRange*2) * 1.2f;
         }
         
         towerChoice.SetActive(false);

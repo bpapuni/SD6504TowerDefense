@@ -8,11 +8,18 @@ public class Enemy : MonoBehaviour
     WaveSpawner waveSpawner;
     Status status;
     public float speed;
+    public int goldReward;
 
     private int level;
     private Transform target;
     private int waypointIndex = 0;
-    private int health;
+    private float health;
+    private bool beingSlowed = false;
+    private Coroutine slowEnemy;
+    private float ogSpeed;
+    private Renderer[] rend;
+    private Color[] startColor;
+    public Color frostSlowColor;
 
     public HealthBar healthBar;
 
@@ -30,6 +37,18 @@ public class Enemy : MonoBehaviour
         waveSpawner = WaveSpawner.instance;
         status = Status.instance;
         health = waveSpawner.waves[waveSpawner.waveIndex].health;
+        ogSpeed = speed;
+
+        rend = gameObject.GetComponentsInChildren<Renderer>();
+        startColor = new Color[rend.Length];
+        for (int i = 0; i < rend.Length; i++)
+        {
+            if (rend[i].material.HasProperty("_Color"))
+            {
+                startColor[i] = rend[i].material.color;
+            }
+        }
+
         healthBar.SetMaxHealth(health);
     }
 
@@ -86,13 +105,40 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         healthBar.SetHealth(health);
         if(health <= 0)  
         {
+            status.UpdateGold(goldReward);
             Destroy(gameObject);
         }
     }
+
+    public void FrostSlow()
+    {
+        if (beingSlowed)
+            StopCoroutine(slowEnemy);
+        slowEnemy = StartCoroutine(SlowEnemy());
+    }
+
+    IEnumerator SlowEnemy()
+    {
+        speed = ogSpeed * 0.5f;
+        for (int i = 0; i < rend.Length; i++)
+            rend[i].material.color = frostSlowColor;
+        yield return new WaitForSeconds(5);
+        beingSlowed = false;
+        speed = ogSpeed;
+        for (int i = 0; i < rend.Length; i++)
+            rend[i].material.color = startColor[i];
+    }
+    //IEnumerator SlowEnemy()
+    //{
+    //    speed = ogSpeed * 0.5f;
+    //    yield return new WaitForSeconds(10);
+    //    beingSlowed = false;
+    //    speed = ogSpeed;
+    //}
 }

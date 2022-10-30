@@ -1334,6 +1334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  goldReward: 20
+  frostSlowColor: {r: 0.22258809, g: 0.3232348, b: 0.7735849, a: 0.7882353}
   healthBar: {fileID: 1095035930940551703}
 --- !u!1 &4289951096958361549
 GameObject:

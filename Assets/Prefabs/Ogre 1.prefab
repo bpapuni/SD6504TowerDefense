@@ -1983,6 +1983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  goldReward: 100
+  frostSlowColor: {r: 0.22258809, g: 0.3232348, b: 0.7735849, a: 0.7882353}
   healthBar: {fileID: 7101726703123862290}
 --- !u!65 &3630987316569102630
 BoxCollider:

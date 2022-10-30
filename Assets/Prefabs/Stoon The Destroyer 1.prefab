@@ -343,6 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  goldReward: 2000
+  frostSlowColor: {r: 0.22258809, g: 0.3232348, b: 0.7735849, a: 0.7882353}
   healthBar: {fileID: 4137763805401784042}
 --- !u!135 &5858324040225290033
 SphereCollider:

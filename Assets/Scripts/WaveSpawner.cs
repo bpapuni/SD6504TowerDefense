@@ -126,5 +126,4 @@ public class WaveSpawner : MonoBehaviour
             Instantiate(_enemy, spawn1.transform.position, spawn1.transform.rotation);
     }
 
-
 }

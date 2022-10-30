@@ -6,9 +6,26 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
-    public int damage;
     public int splashRadius;
     public GameObject impactEffect;
+
+    private float damage;
+
+    public void Awake()
+    {
+        if (gameObject.name == "Arrow(Clone)")
+        {
+            damage = GameObject.FindGameObjectWithTag("BallistaTower").GetComponent<Tower>().damage;
+        }
+        else if (gameObject.name == "FrostBullet(Clone)")
+        {
+            damage = GameObject.FindGameObjectWithTag("FrostTower").GetComponent<Tower>().damage;
+        }
+        else if (gameObject.name == "CannonBall(Clone)")
+        {
+            damage = GameObject.FindGameObjectWithTag("TinyTower").GetComponent<Tower>().damage;
+        }
+    }
 
     public void Seek (Transform _target)
     {
@@ -52,6 +69,19 @@ public class Bullet : MonoBehaviour
                 float distanceSqr = (target.transform.position - enemy.transform.position).sqrMagnitude;
                 if (distanceSqr < Mathf.PI * Mathf.Pow(splashRadius, 2) )
                     enemy.GetComponent<Enemy>().TakeDamage(damage);
+            }
+        }
+        else if (gameObject.name == "FrostBullet(Clone)")
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
+            {
+                float distanceSqr = (target.transform.position - enemy.transform.position).sqrMagnitude;
+                if (distanceSqr < Mathf.PI * Mathf.Pow(splashRadius, 2))
+                {
+                    enemy.GetComponent<Enemy>().FrostSlow();
+                    enemy.GetComponent<Enemy>().TakeDamage(damage);
+                }
             }
         }
         else

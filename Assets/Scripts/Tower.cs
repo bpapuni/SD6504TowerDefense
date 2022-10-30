@@ -59,6 +59,7 @@ public class Tower : MonoBehaviour
             rangeIndicator = Instantiate(buildManager.bonusRangeIndicator, buildManager.bonusRangeIndicator.transform.position, buildManager.bonusRangeIndicator.transform.rotation);
         else
             rangeIndicator = Instantiate(buildManager.rangeIndicatorObj, buildManager.rangeIndicator.transform.position, buildManager.rangeIndicator.transform.rotation);
+        rangeIndicator.transform.localScale = new Vector3(range*2, 0.1f, range*2);
 
         rangeIndicator.SetActive(false);
         InvokeRepeating("UpdateTarget", 0f, 0.5f);

@@ -614,13 +614,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  range: 20
+  range: 15
   fireRate: 1
   partToRotate: {fileID: 3538336884074269369}
   turnSpeed: 10
   Bullet: {fileID: 2366634385065932872, guid: 92a09859fc1cfd746ae6cca7fd71b082, type: 3}
   firePoint: {fileID: 8712434301256724128}
   hoverColor: {r: 0.6313726, g: 0.15686275, b: 0.15686275, a: 0}
+  rangeIndicator: {fileID: 0}
 --- !u!65 &5993742628045819827
 BoxCollider:
   m_ObjectHideFlags: 0
