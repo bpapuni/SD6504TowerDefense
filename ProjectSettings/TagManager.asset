@@ -18,6 +18,10 @@ TagManager:
   - Flags
   - Enemy
   - HealthBarCanvas
+  - MainMenu
+  - HelpMenu
+  - PlayBtn
+  - PauseBtn
   layers:
   - Default
   - TransparentFX
