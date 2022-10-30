@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1829757741530836382}
   - component: {fileID: 1829757741530836381}
   - component: {fileID: 1829757741530836380}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: RangeIndicator
   m_TagString: PendingTower
   m_Icon: {fileID: 0}

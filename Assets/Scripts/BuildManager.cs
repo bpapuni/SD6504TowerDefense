@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -25,8 +24,7 @@ public class BuildManager : MonoBehaviour
 
     private GameObject pendingTower;
     private GameObject towerToBuild;
-    public GameObject rangeIndicator;
-    public GameObject bonusRangeIndicator;
+    private GameObject rangeIndicator;
     private Renderer[] rend;
 
     void Awake()
@@ -95,13 +93,6 @@ public class BuildManager : MonoBehaviour
         Vector3 rangeIndLoc = new Vector3(selectedPlate.transform.position.x, 0f, selectedPlate.transform.position.z);
         rangeIndicator = Instantiate(rangeIndicatorObj, rangeIndLoc, selectedPlate.transform.rotation);
         pendingTower = Instantiate(pendingTower, selectedPlate.transform.position, selectedPlate.transform.rotation);
-
-        if (selectedPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.RANGE)
-        {
-            bonusRangeIndicator = Instantiate(rangeIndicatorObj, rangeIndLoc, selectedPlate.transform.rotation);
-            bonusRangeIndicator.transform.localScale = new Vector3(30f, 0.1f, 30f) * 1.2f;
-        }
-        
         towerChoice.SetActive(false);
         confirmTowerChoice.SetActive(true);
     }
@@ -109,8 +100,6 @@ public class BuildManager : MonoBehaviour
     public void HidePendingTower()
     {
         Destroy(rangeIndicator);
-        if (bonusRangeIndicator)
-            Destroy(bonusRangeIndicator);
         Destroy(pendingTower);
         selectedPlate.GetComponent<Renderer>().material.color = Color.white;
         selectedPlate = null;
@@ -124,7 +113,6 @@ public class BuildManager : MonoBehaviour
 
     public void DeleteTower()
     {
-        Destroy(selectedTower.GetComponent<Tower>().rangeIndicator);
         Destroy(selectedTower);
         selectedPlate.GetComponent<Renderer>().material.color = Color.white;
         selectedPlate = null;

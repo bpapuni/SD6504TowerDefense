@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    WaveSpawner waveSpawner;
     public float speed;
     public int enemyHealth;
     
@@ -14,7 +13,10 @@ public class Enemy : MonoBehaviour
     private int level;
     private Transform target;
     private int wavepointIndex = 0;
+<<<<<<< HEAD
     
+=======
+>>>>>>> parent of e1585b4 (Added Tower Range Indicators)
 
     void Start()
     {
@@ -22,14 +24,17 @@ public class Enemy : MonoBehaviour
         if (level == 1)
         {
             if (Vector3.Distance(transform.position, Waypoints.waypoints[0].position) > 30f)
-                waypointIndex = 10;
+                wavepointIndex = 10;
         }
 
-        target = Waypoints.waypoints[waypointIndex];
+        target = Waypoints.waypoints[wavepointIndex];
 
+<<<<<<< HEAD
         waveSpawner = WaveSpawner.instance;
         enemyHealth = waveSpawner.waves[waveSpawner.waveIndex].health;
 
+=======
+>>>>>>> parent of e1585b4 (Added Tower Range Indicators)
     }
 
 
@@ -50,36 +55,44 @@ public class Enemy : MonoBehaviour
     {
         if (level == 1)
         {
-            if (waypointIndex == Waypoints.waypoints.Length - 2)
+            if (wavepointIndex == Waypoints.waypoints.Length - 2)
             {
                 Destroy(gameObject);
                 return;
             }
 
-            waypointIndex = waypointIndex == 10 ? 4 : waypointIndex + 1;
-            target = Waypoints.waypoints[waypointIndex];
+            wavepointIndex = wavepointIndex == 10 ? 4 : wavepointIndex + 1;
+            target = Waypoints.waypoints[wavepointIndex];
         }
         else
         {
-            if (waypointIndex == 30)
+            if (wavepointIndex == 30)
             {
                 Destroy(gameObject);
                 return;
             }
 
             int rand = Random.Range(0, 2);
+<<<<<<< HEAD
             if (rand == 1)
             {
                 if (wavepointIndex == 0)
                     wavepointIndex = 31;
             }
 
+=======
+            if (rand == 1) { 
+                if (wavepointIndex == 0)
+                    wavepointIndex = 31;
+            }
+            
+>>>>>>> parent of e1585b4 (Added Tower Range Indicators)
             if (wavepointIndex == 54)
                 wavepointIndex = 26;
             else
-                waypointIndex++;
+                wavepointIndex++;
 
-            target = Waypoints.waypoints[waypointIndex];
+            target = Waypoints.waypoints[wavepointIndex];
         }
 
     }

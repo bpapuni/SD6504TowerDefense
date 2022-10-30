@@ -497,9 +497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fe40db747249c4294e13b2da54baa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 400
   range: 20
-  fireRate: 0.25
+  fireRate: 1
   partToRotate: {fileID: 22522191409334209}
   turnSpeed: 10
   Bullet: {fileID: 602356865351561083, guid: 76556f58f02bfbd4b85b9de9faaeb690, type: 3}

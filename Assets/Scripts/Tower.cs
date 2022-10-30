@@ -9,9 +9,8 @@ public class Tower : MonoBehaviour
     private Transform target;
 
     [Header("Attributes")]
-    public float damage;
-    public float range;
-    public float fireRate;
+    public float range = 15f;
+    public float fireRate = 1f;
     private float fireCountdown = 0f;
 
     [Header("Unity Fields")]
@@ -26,7 +25,7 @@ public class Tower : MonoBehaviour
     private GameObject buildPlate;
     private Renderer bpRend;
     private TMP_Text confirmDelete;
-    public GameObject rangeIndicator;
+    private bool deleting;
 
     void Awake()
     {
@@ -42,48 +41,28 @@ public class Tower : MonoBehaviour
                 startColor[i] = rend[i].material.color;
         }
         confirmDelete = buildManager.confirmTowerDelete.GetComponentInChildren<TMP_Text>();
-        if (buildPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.FIRE)
-        {
-            damage = damage * 1.2f;
-        }
-        else if (buildPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.RANGE)
-        {
-            range = range * 1.2f;
-        }
-        else if (buildPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.SPEED)
-        {
-            fireRate = fireRate * 1.2f;
-        }
-
-        if (buildManager.selectedPlate.GetComponent<BuildingPlate>().type == BuildingPlate.plateType.RANGE)
-            rangeIndicator = Instantiate(buildManager.bonusRangeIndicator, buildManager.bonusRangeIndicator.transform.position, buildManager.bonusRangeIndicator.transform.rotation);
-        else
-            rangeIndicator = Instantiate(buildManager.rangeIndicatorObj, buildManager.rangeIndicator.transform.position, buildManager.rangeIndicator.transform.rotation);
-
-        rangeIndicator.SetActive(false);
+        deleting = false;
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
     void OnMouseEnter()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || deleting)
             return;
 
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = hoverColor;
         bpRend.material.color = hoverColor;
-        rangeIndicator.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        if (buildManager.selectedPlate != null)
+        if (buildManager.selectedPlate != null || deleting)
             return;
 
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = startColor[i];
         bpRend.material.color = Color.white;
-        rangeIndicator.SetActive(false);
     }
 
     void OnMouseUp()

@@ -42,11 +42,11 @@ public class BuildingPlate : MonoBehaviour
         Vector3 pos = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
         magicBuff = Instantiate(buildManager.magicBuff, pos, transform.rotation);
         if (type == plateType.FIRE)
-            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = new Color(0, 255, 255, 0.3f);
+            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = Color.blue;
         else if (type == plateType.RANGE)
-            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = new Color(255, 255, 255, 0.3f);
+            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = Color.white;
         else if (type == plateType.SPEED)
-            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = new Color(180, 255, 0, 0.3f);
+            magicBuff.GetComponentsInChildren<ParticleSystem>()[1].startColor = Color.red;
 
     }
 
@@ -54,15 +54,7 @@ public class BuildingPlate : MonoBehaviour
     {
         if (tower != null || buildManager.selectedPlate != null)
             return;
-
         rend.material.color = hoverColor;
-
-        if (type == plateType.FIRE)
-            status.ShowMessage("Tower Damage Bonus Active");
-        else if (type == plateType.RANGE)
-            status.ShowMessage("Tower Range Bonus Active");
-        else if (type == plateType.SPEED)
-            status.ShowMessage("Tower Attack Speed Bonus Active");
     }
 
     void OnMouseExit()
@@ -71,8 +63,6 @@ public class BuildingPlate : MonoBehaviour
             return;
 
         rend.material.color = startColor;
-
-        status.ClearMessage();
     }
 
     void OnMouseUp()

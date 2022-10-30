@@ -613,7 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fe40db747249c4294e13b2da54baa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
   range: 20
   fireRate: 1
   partToRotate: {fileID: 3538336884074269369}
