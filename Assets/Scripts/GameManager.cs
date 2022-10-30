@@ -6,8 +6,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public GameObject playBtn;
-    public GameObject pauseBtn;
+    private bool paused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (paused)
+                PlayGame();
+            else
+                PauseGame();
+        }
+    }
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -30,20 +40,16 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        
+        paused = true;
         Time.timeScale = 0f;
-        playBtn.SetActive(true);
-        pauseBtn.SetActive(false);
 
 
     }
 
     public void PlayGame()
     {
-        
+        paused = false;
         Time.timeScale = 1f;
-        playBtn.SetActive(false);
-        pauseBtn.SetActive(true);
 
     }
 

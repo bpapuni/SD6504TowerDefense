@@ -66,7 +66,7 @@ public class Status : MonoBehaviour
     public static void UpdateLives(int livesChange)
     {
         lives -= livesChange;
-        LivesAmount.text = lives.ToString();
+        //LivesAmount.text = lives.ToString();
         if(lives <= 0)
         {
             GameManager.EndGame();
