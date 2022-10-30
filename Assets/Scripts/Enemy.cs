@@ -44,8 +44,8 @@ public class Enemy : MonoBehaviour
 
         // Gain 20% size for every 300 health above baseline
         float sizeMultiplier = 1 + (-1 + health / 300) * 0.2f;
-
-        transform.localScale = transform.localScale * sizeMultiplier;
+        if (!(name.Contains("Lilith") || name.Contains("Stoon")))
+            transform.localScale = transform.localScale * sizeMultiplier;
 
         rend = gameObject.GetComponentsInChildren<Renderer>();
         startColor = new Color[rend.Length];
@@ -63,6 +63,13 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (beingSlowed && health > 0)
+        {
+            speed = ogSpeed * 0.5f;
+            for (int i = 0; i < rend.Length; i++)
+                rend[i].material.color = frostSlowColor;
+        }
+
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
@@ -120,7 +127,7 @@ public class Enemy : MonoBehaviour
         if(health <= 0)  
         {
             status.UpdateGold(goldReward);
-            speed = 0;
+            speed = 0.001f;
             gameObject.GetComponent<Animator>().SetTrigger("die");
         }
     }
@@ -132,27 +139,18 @@ public class Enemy : MonoBehaviour
 
     public void FrostSlow()
     {
-        if (beingSlowed)
+        beingSlowed = true;
+        if (slowEnemy != null)
             StopCoroutine(slowEnemy);
-        slowEnemy = StartCoroutine(SlowEnemy());
+        slowEnemy = StartCoroutine(RemoveSlow());
     }
 
-    IEnumerator SlowEnemy()
+    IEnumerator RemoveSlow()
     {
-        speed = ogSpeed * 0.5f;
-        for (int i = 0; i < rend.Length; i++)
-            rend[i].material.color = frostSlowColor;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         beingSlowed = false;
         speed = ogSpeed;
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = startColor[i];
     }
-    //IEnumerator SlowEnemy()
-    //{
-    //    speed = ogSpeed * 0.5f;
-    //    yield return new WaitForSeconds(10);
-    //    beingSlowed = false;
-    //    speed = ogSpeed;
-    //}
 }

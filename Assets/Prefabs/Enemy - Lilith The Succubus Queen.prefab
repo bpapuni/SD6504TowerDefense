@@ -458,7 +458,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 105198, guid: 869a245f6edc202439ee64616165fbd3, type: 3}
       propertyPath: m_Name
-      value: Lilith The Succubus Queen
+      value: Enemy - Lilith The Succubus Queen
       objectReference: {fileID: 0}
     - target: {fileID: 105198, guid: 869a245f6edc202439ee64616165fbd3, type: 3}
       propertyPath: m_TagString
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a57de47729c1f4ba432c3052338e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 18
+  speed: 14
   goldReward: 2000
   frostSlowColor: {r: 0.22258809, g: 0.3232348, b: 0.7735849, a: 0.7882353}
   healthBar: {fileID: 5564231680294638922}

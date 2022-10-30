@@ -146,6 +146,7 @@ public class Tower : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
+        GameObject boss = null;
 
         foreach(GameObject enemy in enemies)
         {
@@ -155,9 +156,14 @@ public class Tower : MonoBehaviour
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
             }
+            if (enemy.name.Contains("Lilith") || enemy.name.Contains("Stoon"))
+                boss = enemy;
         }
 
-        if (nearestEnemy != null && shortestDistance <= range)
+        // Prioritise targetting boss
+        if (boss != null && Vector3.Distance(transform.position, boss.transform.position) <= range)
+            target = boss.transform;
+        else if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
         }
