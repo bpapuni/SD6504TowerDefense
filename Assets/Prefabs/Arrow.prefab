@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  damage: 100
   impactEffect: {fileID: 0}
 --- !u!65 &2973519541526909650
 BoxCollider:

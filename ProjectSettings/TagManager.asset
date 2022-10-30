@@ -4,26 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Flags
-  - Enemy
-  - Spawn
-  - Spawn1
-  - Spawn2
-  - BuildingPlate
+  - Undefined
+  - PendingTower
   - FrostTower
   - BallistaTower
   - TinyTower
-  - ConfirmTower
-  - MainMenu
-  - HelpMenu
-<<<<<<< Updated upstream
-=======
-  - PendingTower
-  - StatusText
-  - TowerCostText
-  - FxTemporaire
   - Weapon
->>>>>>> Stashed changes
+  - TowerCostText
+  - StatusText
+  - Spawn2
+  - Spawn1
+  - BuildingPlate
+  - Flags
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
+    public int damage;
     public GameObject impactEffect;
 
     public void Seek (Transform _target)
@@ -21,7 +22,8 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector3 dir = target.position - transform.position;
+        // Aim at targets body, not the floor
+        Vector3 dir = (target.position + new Vector3(0, target.position.y/2, 0)) - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)
@@ -47,16 +49,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        
-        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+
+        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
-            enemyComponent.TakeDamage(20);
-            
+            enemyComponent.TakeDamage(damage);
+
         }
-
-        
-      
     }
-
-
 }
