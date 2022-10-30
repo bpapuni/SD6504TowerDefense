@@ -54,5 +54,8 @@ public class Bullet : MonoBehaviour
         {
             enemyComponent.TakeDamage(damage);
         }
+
+       
+
     }
 }

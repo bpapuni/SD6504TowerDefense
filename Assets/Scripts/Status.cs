@@ -12,6 +12,9 @@ public class Status : MonoBehaviour
     private Text GoldAmount;
     private Text StatusMessage;
 
+    public GameObject playBtn;
+    public GameObject pauseBtn;
+
     void Awake()
     {
         if (instance != null)
@@ -25,11 +28,16 @@ public class Status : MonoBehaviour
 
     void Start()
     {
+
+
+
         waveSpawner = WaveSpawner.instance;
         GoldAmount = GameObject.FindGameObjectsWithTag("StatusText")[0].GetComponent<Text>();
         StatusMessage = GameObject.FindGameObjectsWithTag("StatusText")[1].GetComponent<Text>();
         UpdateGold(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
+
+
     }
 
     void WaveSpawnTime()
@@ -69,5 +77,24 @@ public class Status : MonoBehaviour
         StatusMessage.text = message;
         yield return new WaitForSeconds(displayTime);
         StatusMessage.text = "";
+    }
+
+    public void PauseGame()
+    {
+        Debug.Log("Game Paused");
+        Time.timeScale = 0f;
+        playBtn.SetActive(true);
+        pauseBtn.SetActive(false);
+
+
+    }
+
+    public void PlayGame()
+    {
+        Debug.Log("Game Play");
+        Time.timeScale = 1f;
+        playBtn.SetActive(false);
+        pauseBtn.SetActive(true);
+
     }
 }
