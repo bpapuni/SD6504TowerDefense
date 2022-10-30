@@ -136,6 +136,7 @@ public class BuildManager : MonoBehaviour
         for (int i = 0; i < rend.Length; i++)
             rend[i].material.color = Color.white;
         selectedPlate.GetComponent<Renderer>().material.color = Color.white;
+        selectedTower.GetComponent<Tower>().rangeIndicator.SetActive(false);
         selectedTower = null;
         selectedPlate = null;
     }

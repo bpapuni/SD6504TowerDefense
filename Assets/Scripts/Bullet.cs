@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         }
 
         // Aim at targets body, not the floor
-        Vector3 dir = (target.position + new Vector3(0, target.position.y/2, 0)) - transform.position;
+        Vector3 dir = (target.position + new Vector3(0, target.localScale.y/2, 0)) - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)

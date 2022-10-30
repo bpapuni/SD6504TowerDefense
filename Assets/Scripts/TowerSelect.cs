@@ -42,7 +42,6 @@ public class TowerSelect : MonoBehaviour
 
     public void ConfirmPurchaseTower()
     {
-        // TODO move costs from status to buildManager
         int TowerCost = 0;
         GameObject towerToBuild = buildManager.GetTowerToBuild();
 
