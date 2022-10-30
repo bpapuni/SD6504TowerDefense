@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4482453, g: 0.49827206, b: 0.5755818, a: 1}
+  m_IndirectSpecularColor: {r: 0.4482447, g: 0.4982717, b: 0.57558084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17834,6 +17834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 300
+  playBtn: {fileID: 0}
+  pauseBtn: {fileID: 0}
 --- !u!114 &556085450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17878,12 +17880,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - waveName: 'Wave 1: Attack of the Frog Men'
-    enemy: {fileID: 8250780153984938717, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
+    enemy: {fileID: 6551975550422907330, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
     health: 300
     count: 6
     rate: 1
   - waveName: 'Wave 2: Voodoo Doll'
-    enemy: {fileID: 490397575303408734, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
+    enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 300
     count: 6
     rate: 2
@@ -17893,12 +17895,12 @@ MonoBehaviour:
     count: 6
     rate: 3
   - waveName: 'Wave 4: Frogmen Round 2'
-    enemy: {fileID: 8250780153984938717, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
+    enemy: {fileID: 6551975550422907330, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
     health: 600
     count: 6
     rate: 1
   - waveName: 'Wave 5:  The VooDoo Round 2'
-    enemy: {fileID: 490397575303408734, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
+    enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 600
     count: 6
     rate: 1.5
@@ -17913,12 +17915,12 @@ MonoBehaviour:
     count: 1
     rate: 1.5
   - waveName: 'Wave 8: '
-    enemy: {fileID: 8250780153984938717, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
+    enemy: {fileID: 6551975550422907330, guid: 786c4d6ac7042334dbc6f5b430926dff, type: 3}
     health: 900
     count: 6
     rate: 1.5
   - waveName: 'Wave 10: '
-    enemy: {fileID: 490397575303408734, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
+    enemy: {fileID: 4663126865850887761, guid: e4b870403256f4e47a3537d2cb239cfe, type: 3}
     health: 900
     count: 6
     rate: 1.5
@@ -20106,6 +20108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -26434,6 +26437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -40441,6 +40445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

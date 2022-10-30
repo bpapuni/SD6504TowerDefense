@@ -12,8 +12,7 @@ public class Status : MonoBehaviour
     private Text GoldAmount;
     private Text StatusMessage;
 
-    public GameObject playBtn;
-    public GameObject pauseBtn;
+
 
     void Awake()
     {
@@ -79,22 +78,5 @@ public class Status : MonoBehaviour
         StatusMessage.text = "";
     }
 
-    public void PauseGame()
-    {
-        Debug.Log("Game Paused");
-        Time.timeScale = 0f;
-        playBtn.SetActive(true);
-        pauseBtn.SetActive(false);
 
-
-    }
-
-    public void PlayGame()
-    {
-        Debug.Log("Game Play");
-        Time.timeScale = 1f;
-        playBtn.SetActive(false);
-        pauseBtn.SetActive(true);
-
-    }
 }

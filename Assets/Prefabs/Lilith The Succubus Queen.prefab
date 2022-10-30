@@ -551,6 +551,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   healthBar: {fileID: 5564231680294638922}
+--- !u!135 &3171629294475920170
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408582511248326520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &7408582511248799702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447040, guid: 869a245f6edc202439ee64616165fbd3, type: 3}
