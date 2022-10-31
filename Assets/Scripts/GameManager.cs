@@ -41,6 +41,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void LoadWinScene()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void LoadHalfTime()
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

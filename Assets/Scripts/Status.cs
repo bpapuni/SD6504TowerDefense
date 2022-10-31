@@ -15,6 +15,7 @@ public class Status : MonoBehaviour
     private Text LivesAmount;
     private Image Play;
     private Image Pause;
+    public GameObject ReturnHomeBtn;
 
     void Awake()
     {
@@ -39,6 +40,8 @@ public class Status : MonoBehaviour
         UpdateGold(0);
         UpdateLives(0);
         InvokeRepeating("WaveSpawnTime", 0f, 0.5f);
+
+        ReturnHomeBtn.SetActive(false);
 
 
     }
@@ -100,12 +103,15 @@ public class Status : MonoBehaviour
             ShowMessage("Game Paused");
             Play.gameObject.SetActive(true);
             Pause.gameObject.SetActive(false);
+            ReturnHomeBtn.gameObject.SetActive(true);
+
         }
         else
         {
             ShowMessage("Game Resumed", 3);
             Play.gameObject.SetActive(false);
             Pause.gameObject.SetActive(true);
+            ReturnHomeBtn.gameObject.SetActive(false);
         }
     }
 }

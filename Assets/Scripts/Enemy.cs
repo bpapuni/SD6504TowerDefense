@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public Color frostSlowColor;
 
     public HealthBar healthBar;
+    GameManager gameManager;
 
     void Start()
     {
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
         }
 
         healthBar.SetMaxHealth(health);
+        gameManager = GameManager.instance;
     }
 
 
@@ -135,6 +137,8 @@ public class Enemy : MonoBehaviour
     public void DestroyEnemy()
     {
         Destroy(gameObject);
+
+        
     }
 
     public void FrostSlow()

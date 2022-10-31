@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WaveSpawner : MonoBehaviour
 {
     public static WaveSpawner instance;
+    GameManager gameManager;
     public enum SpawnState { SPAWNING, WAITNG, COUNTING};
 
     [System.Serializable]
@@ -52,6 +53,7 @@ public class WaveSpawner : MonoBehaviour
     {
         waveCountdown = timeBetweenWaves;
         level = SceneManager.GetActiveScene().name == "Level 1" ? 1 : 2;
+        gameManager = GameManager.instance;
 
     }
 
@@ -61,9 +63,19 @@ public class WaveSpawner : MonoBehaviour
         {
             if (waveIndex < 9 && !EnemyIsAlive())
                 waveIndex++;
+            else if (waveIndex == 9 && !EnemyIsAlive())
+            {
+                if (level == 1)
+                    gameManager.LoadHalfTime();
+                else
+                    gameManager.LoadWinScene();
+            }
+
             else
                 return;
         }
+
+
 
         if (waveCountdown <= 0)
         {
@@ -81,13 +93,13 @@ public class WaveSpawner : MonoBehaviour
         
     }
 
-    bool EnemyIsAlive()
+    public bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
         if (searchCountdown <= 0)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectWithTag("Enemy") == null || waveIndex >= 6)
+            if (GameObject.FindGameObjectWithTag("Enemy") == null || (waveIndex >= 6 && waveIndex <= 8) || (GameObject.FindGameObjectWithTag("Enemy") == null && waveIndex == 9))
             {
                 return false;
             }
