@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>f81e7e23f9c8ccd40bebf0eae86d01f6</guid>
+    <fileName>Assets/Scripts/Billboard.cs</fileName>
+    <timeStamp>2022-10-30T15:16:58.6841475+13:00</timeStamp>
+    <typeFullName>
+      <string>Billboard</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a78e2a861783ed544b1bc4cb3130a2fb</guid>
+    <fileName>Assets/Scripts/BuildingPlate.cs</fileName>
+    <timeStamp>2022-10-30T23:37:42.6531818+13:00</timeStamp>
+    <typeFullName>
+      <string>BuildingPlate</string>
+      <string>BuildingPlate+plateType</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3c55b044defe0d944bad3872f1a85a6e</guid>
+    <fileName>Assets/Scripts/BuildManager.cs</fileName>
+    <timeStamp>2022-10-31T00:37:11.9263126+13:00</timeStamp>
+    <typeFullName>
+      <string>BuildManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6a03f88b7d715bb47ad6122e2d1eae92</guid>
+    <fileName>Assets/Scripts/Bullet.cs</fileName>
+    <timeStamp>2022-10-31T09:12:09.3001054+13:00</timeStamp>
+    <typeFullName>
+      <string>Bullet</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>005615acfd4a6c64c9c5fdfa5039352a</guid>
+    <fileName>Assets/Scripts/CameraMovement.cs</fileName>
+    <timeStamp>2022-10-31T15:07:25.4405845+13:00</timeStamp>
+    <typeFullName>
+      <string>CameraMovement</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>31a57de47729c1f4ba432c3052338e5a</guid>
+    <fileName>Assets/Scripts/Enemy.cs</fileName>
+    <timeStamp>2022-10-31T15:22:42.7110861+13:00</timeStamp>
+    <typeFullName>
+      <string>Enemy</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8c61717392ac2ef4597eb87b4ba5ae18</guid>
+    <fileName>Assets/Scripts/GameManager.cs</fileName>
+    <timeStamp>2022-10-31T15:22:42.7120867+13:00</timeStamp>
+    <typeFullName>
+      <string>GameManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f9fea175a462bfd4db012ab50769e3aa</guid>
+    <fileName>Assets/Scripts/HealthBar.cs</fileName>
+    <timeStamp>2022-10-31T00:56:28.2225612+13:00</timeStamp>
+    <typeFullName>
+      <string>HealthBar</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f8f4dbd842a6a2640b808250a7228ce0</guid>
+    <fileName>Assets/Scripts/Status.cs</fileName>
+    <timeStamp>2022-10-31T15:22:42.7130867+13:00</timeStamp>
+    <typeFullName>
+      <string>Status</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b9fe40db747249c4294e13b2da54baa2</guid>
+    <fileName>Assets/Scripts/Tower.cs</fileName>
+    <timeStamp>2022-10-31T11:21:04.0213175+13:00</timeStamp>
+    <typeFullName>
+      <string>Tower</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>955cd76f3f20b7741a9eb62d70c4866c</guid>
+    <fileName>Assets/Scripts/TowerSelect.cs</fileName>
+    <timeStamp>2022-10-30T22:34:14.4161668+13:00</timeStamp>
+    <typeFullName>
+      <string>TowerSelect</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9171468225e77b7439b7867e504f620e</guid>
+    <fileName>Assets/Scripts/WaveSpawner.cs</fileName>
+    <timeStamp>2022-10-31T15:22:42.7140869+13:00</timeStamp>
+    <typeFullName>
+      <string>WaveSpawner</string>
+      <string>WaveSpawner+SpawnState</string>
+      <string>WaveSpawner+Wave</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>35bb28391589d73448523ef8433028fb</guid>
+    <fileName>Assets/Scripts/Waypoints.cs</fileName>
+    <timeStamp>2022-10-29T08:12:20.4942428+13:00</timeStamp>
+    <typeFullName>
+      <string>Waypoints</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9c4fcce295aee5d4fb38ac4f82c8e664</guid>
+    <fileName>Assets/JMO Assets/Welcome Screen/CFXR_WelcomeScreen.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8586422+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>6fd2e8874f60266498a388d7229a1bac</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.0784612+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_AutoDestructShuriken</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b78c1ba9facacbd48b8e1d9a4fb3ee0d</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.0794615+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_AutoRotate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>74eb290077a495b4f8489f895b2cc599</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.0804618+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_LightFlicker</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c2255468ea97f384a9ebbb13e497e050</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.0814624+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_LightIntensityFade</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>35e9f6a6071b4f44fa2cf94b59d33251</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8256346+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>1529372f6ddbfb0429260b50bc9d1aa8</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.826635+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>fd81627723031224baf6eef1b52a3f50</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8276351+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d4db3f053cda4bd4ba39ef9838e213ed</guid>
+    <fileName>Assets/Map Assets/Cattleya/Scripts/DemoScene.cs</fileName>
+    <timeStamp>2022-10-27T13:27:33.0157369+13:00</timeStamp>
+    <typeFullName>
+      <string>DemoScene</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ce50de2eb942e644c9dcef912b5c4254</guid>
+    <fileName>Assets/Towers/3DForge/Scripts/MaterialAlphaPulse.cs</fileName>
+    <timeStamp>2022-10-27T13:27:36.5525929+13:00</timeStamp>
+    <typeFullName>
+      <string>MaterialAlphaPulse</string>
+      <string>MaterialAlphaPulse+StartMode</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>84772bd234428bc4588cf5cdddad7eaa</guid>
+    <fileName>Assets/Towers/3DForge/Scripts/ObjectConstantRotation.cs</fileName>
+    <timeStamp>2022-10-27T13:27:36.5535933+13:00</timeStamp>
+    <typeFullName>
+      <string>ObjectConstantRotation</string>
+      <string>ObjectConstantRotation+axis_to_rotate_on</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4005bb70a8ab5e247aa3f25baf66d19f</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.247236+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>72144591ad5a3f24ea001ac45196fc16</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.247236+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>2d0f403df461295419e6abf2fddeab8e</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.2482365+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>bd7bf5bf431ffa74caec0e9bbd8cc175</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/CollectionData.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.2482365+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>36968d53c9dd816488134bb36b5f0a40</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.2482365+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>21ec204c6f5e08f479d731655ef4f0dd</guid>
+    <fileName>Assets/unity-sweeper/UnitySweeper/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2022-10-31T16:38:06.2492371+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>51caaa882fe511e4490acaf3c472a0dc</guid>
+    <fileName>Assets/Characters/FantasyPack1/Ent/Scripts/Ent_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.5411288+13:00</timeStamp>
+    <typeFullName>
+      <string>Ent_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>17d9da202e2df8b4fbd35613940d04d3</guid>
+    <fileName>Assets/Characters/FantasyPack1/Frogman_Beast/scripts/Frogman_b_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.5751366+13:00</timeStamp>
+    <typeFullName>
+      <string>Frogman_b_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8a7085d667f56e44499047f61abf1dde</guid>
+    <fileName>Assets/Characters/FantasyPack1/Goblins_pack/scripts/goblin_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.7221693+13:00</timeStamp>
+    <typeFullName>
+      <string>goblin_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0bab8478a03c43646a4d46a44b62d17f</guid>
+    <fileName>Assets/Characters/FantasyPack1/Golems/Scripts/Golem_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.7311719+13:00</timeStamp>
+    <typeFullName>
+      <string>Golem_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bed72a76b3d257d4298382d739efd1f3</guid>
+    <fileName>Assets/Characters/FantasyPack1/iguana/script/iguana_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.9747281+13:00</timeStamp>
+    <typeFullName>
+      <string>iguana_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>18c346b4fe69e1b45a52205c7ab92cf8</guid>
+    <fileName>Assets/Characters/FantasyPack1/Monster-Rabbit/Scripts/MR_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.7826847+13:00</timeStamp>
+    <typeFullName>
+      <string>MR_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bee4392e750c5304dbbb9c663f5484e6</guid>
+    <fileName>Assets/Characters/FantasyPack1/Ogre_asset/script/Ogre_control.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.8256948+13:00</timeStamp>
+    <typeFullName>
+      <string>Ogre_control</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8be462584d75c284a85b472416821710</guid>
+    <fileName>Assets/Characters/FantasyPack1/Succubus/scripts/suc_ctrl.cs</fileName>
+    <timeStamp>2022-10-27T13:27:32.9077128+13:00</timeStamp>
+    <typeFullName>
+      <string>suc_ctrl</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d9c4e89389fa607479b0744ec6611490</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9719286+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_AutoStopLoopedEffect</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8b17383a625e88348a99a6eeef772d40</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9729292+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_Demo_New</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>27666076fd6e86245aa62dfd9e943d6c</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9739294+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_Demo_RandomDir</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>83982eed39974834bada258fbddd1e72</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9749295+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_Demo_RandomDirectionTranslate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f71e90e62dfae594490eb4d9b611f930</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9759299+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_Demo_RotateCamera</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1e42ac40a6fba2e4d94a0070ef45cea1</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs</fileName>
+    <timeStamp>2022-10-30T14:22:01.9769297+13:00</timeStamp>
+    <typeFullName>
+      <string>CFX_Demo_Translate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>00a9608d23679304bbbcf63f569012f8</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_BuildShaderPreprocessor.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.1874857+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>ce7d96d3a4d4f3b4681ab437a9710d60</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_ExpressionParser.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.188486+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>4fb4c15e772a1cc4baecc7a958bf9cc7</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_MaterialInspector.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.1894865+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>26306333afc273640814fd7a7b3968e0</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Editor/CFXR_Styles.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.1904869+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>04efd1cc0f5c31c4da57d931c6665976</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.CameraShake.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.6370896+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>9205bc1bbacc90040a998067b5643d16</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_Effect.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.6380899+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>403cb51292a8b3c4c870cccfc0e68659</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_EmissionBySurface.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.6390901+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>03c8102322ad0d04fa6ae3f17887e967</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_ParticleText.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.6410908+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>ffbf5f8b3f8ff3e49bbbf5495becc6b3</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Scripts/CFXR_ParticleTextFontAsset.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.6420907+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>6363bba448bf64e60a763433f9ddf81b</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8286356+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>036bc30d96c3349ce86bfc8d95667da7</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomEditor.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8306357+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>4afcb2949e7fb42679b587b8848b7e02</guid>
+    <fileName>Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Editor/BloomGraphDrawer.cs</fileName>
+    <timeStamp>2022-10-30T14:22:02.8326361+13:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+</ArrayOfTypeDate>
