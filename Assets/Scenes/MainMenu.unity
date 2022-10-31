@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2362,6 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2452,8 +2453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61717392ac2ef4597eb87b4ba5ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  pauseBtn: {fileID: 0}
+  paused: 0
 --- !u!114 &613819404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2707,8 +2707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61717392ac2ef4597eb87b4ba5ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  pauseBtn: {fileID: 0}
+  paused: 0
 --- !u!1 &655554578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,6 +2899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3545,6 +3545,7 @@ GameObject:
   - component: {fileID: 801419918}
   - component: {fileID: 801419917}
   - component: {fileID: 801419916}
+  - component: {fileID: 801419919}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -3616,7 +3617,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 801419917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 801419919}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &801419917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3655,6 +3668,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801419914}
   m_CullTransparentMesh: 1
+--- !u!114 &801419919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801419914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c61717392ac2ef4597eb87b4ba5ae18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
 --- !u!1 &851484615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4229,6 +4255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -6169,8 +6196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61717392ac2ef4597eb87b4ba5ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  pauseBtn: {fileID: 0}
+  paused: 0
 --- !u!1 &1380573961
 GameObject:
   m_ObjectHideFlags: 0
@@ -7753,8 +7779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c61717392ac2ef4597eb87b4ba5ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 0}
-  pauseBtn: {fileID: 0}
+  paused: 0
 --- !u!114 &1670801312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10601,6 +10626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
